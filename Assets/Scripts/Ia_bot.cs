@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Ia_bot : MonoBehaviour {
 
-	public float speed = 0.06f;
+	public float speed = 0.3f;
 	public string direction;
 	public float temps = 0f;
 	public float duree_manoeuvre = 0f;
