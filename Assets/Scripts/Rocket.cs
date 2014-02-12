@@ -8,9 +8,9 @@ public class Rocket : MonoBehaviour {
 	//private Vector3 start_position;
 	//private Vector3 cible_position;
 	//private Transform transform;
-	private float duree_de_vie = 1.0f;
+	private float duree_de_vie = 4.0f;
 	private float start_time;
-	private float speed = 10.0f;
+	private float speed = 40.0f;
 	//Vector3 endPosition = new Vector3(0.0f,0.0f,0.0f);
 	float t =0.0f;
 

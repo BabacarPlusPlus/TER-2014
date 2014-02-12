@@ -131,7 +131,7 @@ public class Ia_bot : MonoBehaviour {
 
 	GameObject detectionEnnemie()// objet doit elre player
 	{
-		float distance = 7.0f;
+		float distance = 30.0f;
 		float min = 500f ;
 		GameObject[] ennemies;
 
@@ -161,10 +161,10 @@ public class Ia_bot : MonoBehaviour {
 
 	void attaqueEnnemis()
 	{
-		float distance = 9.0f;
+		float distance = 60.0f;
 		if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position)< distance))
 		{
-			if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position) > 2.5f))
+			if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position) > 20f))
 			{
 				this.transform.LookAt(cible.transform.position);
 				

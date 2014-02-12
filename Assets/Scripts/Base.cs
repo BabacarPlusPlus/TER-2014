@@ -24,10 +24,12 @@ public class Base : MonoBehaviour {
 
 	void createBot()
 	{
+
+		Vector3 pos = new Vector3 (this.transform.position.x,this.transform.position.y-15,this.transform.position.z);
 		if(this.name == "baseA")
-			Instantiate(botA,this.transform.position, this.transform.rotation);
+			Instantiate(botA,pos, this.transform.rotation);
 		if(this.name == "baseB")
-			Instantiate(botB,this.transform.position, this.transform.rotation);
+			Instantiate(botB,pos, this.transform.rotation);
 	}
 
 
