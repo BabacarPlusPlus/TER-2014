@@ -96,7 +96,7 @@
      <Compile Include="Assets\Script\Kinect\KinectWrapper\KinectRecorder.cs" />
      <Compile Include="Assets\Script\Kinect\KinectWrapper\KinectSensor.cs" />
      <Compile Include="Assets\Script\Kinect\KinectWrapper\SkeletonWrapper.cs" />
-     <Compile Include="Assets\Script\Kinect\MouvementVaisseau.cs" />
+     <Compile Include="Assets\Script\Kinect\MouvementKinect.cs" />
      <Compile Include="Assets\Script\Kinect\Vaisseau.cs" />
      <Compile Include="Assets\Scripts\Avance.cs" />
      <Compile Include="Assets\Scripts\Base.cs" />

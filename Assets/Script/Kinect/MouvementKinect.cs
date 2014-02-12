@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MouvementVaisseau : MonoBehaviour {
+public class MouvementKinect : MonoBehaviour {
 
 	public Transform direction;
 	public GameObject[] selectableObjects;
