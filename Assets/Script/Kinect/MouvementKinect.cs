@@ -1,11 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class GesturesDemoScript : MonoBehaviour 
-{
+public class MouvementKinect : MonoBehaviour {
+
+	public Transform direction;
 	public GameObject[] selectableObjects;
 	public Material selectedObjectMaterial;
-	public float hitForce = 300f;
+	public float hitForce = 0.001f;
 	
 	private KinectManager manager;
 	private GameObject handCursor;
@@ -16,12 +17,19 @@ public class GesturesDemoScript : MonoBehaviour
 	private GameObject infoGUI;
 	private string detectedGesture;
 	
-	
+	private KinectWrapper kw;
+
+	private bool fast;
+	private int speed;
+
 	void Awake() 
 	{
+		speed = 5;
+		fast = false;
 		// get needed objects´ references
-		manager = Camera.mainCamera.GetComponent<KinectManager>();
-		handCursor = GameObject.Find("HandCursor");
+		manager = GameObject.Find("Vaisseau/Main Camera").GetComponent<KinectManager>();
+		//handCursor = GameObject.Find("HandCursor");
+		handCursor = gameObject;
 		infoGUI = GameObject.Find("HandGuiText");
 		
 		// save original materials
@@ -38,37 +46,83 @@ public class GesturesDemoScript : MonoBehaviour
 	
 	void Update() 
 	{
+		//Vaisseau.avancer();
+
+		handCursor.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
 		if(manager != null && KinectManager.IsKinectInitialized() && manager.GetPlayer1ID() > 0)
 		{
 			uint userId = manager.GetPlayer1ID();
 			Vector3 screenNormalPos = Vector3.zero;
-			
 			// cursor control
-			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.RightHandCursor) >= 0.1f)
+			//if(manager.IsGestureComplete(userId, KinectWrapper.Gestures.RightHandCursor, true))
+			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerADroite	) >= 0.1f)
 			{
+				if(handCursor)
+				{
+					//screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.RightHandCursor);
+					//handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
+					handCursor.transform.Rotate(Vector3.down * 1.5f, Space.World);
+					/*direction.Rotate(Vector3.up * 1.5f, Space.World);
+					Transform rotate = Quaternion.LookRotation(direction.position - transform.position);
+					transform.rotation = Quaternion.Slerp(transform.position, rotate, Time.deltaTime * 1);//*/
 
-				if(handCursor)
-				{
-					screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.RightHandCursor);
-					handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
-					Debug.Log(KinectWrapper.Gestures.RightHandCursor);
+
 				}
 			}
-			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.LeftHandCursor) >= 0.1f)
+			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerAGauche) >= 0.1f)
 			{
 				if(handCursor)
 				{
-					screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.LeftHandCursor);
-					handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
+					//screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.LeftHandCursor);
+					//handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
+					//handCursor.rigidbody.AddForce(Vector3.zero);
+					handCursor.transform.Rotate(Vector3.up * 1.5f, Space.World);
+
+
 				}
-			}
+			}//*/
+			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Accelerer) >= 0.1f)
+			{
+				if(handCursor)
+				{
+					//screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.LeftHandCursor);
+					//handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
+					//handCursor.rigidbody.AddForce(Vector3.left * 4f);
+					//handCursor.rigidbody.AddForceAtPosition(Vector3.forward * 3f, transform.position);
+					//handCursor.transform.Translate(Vector3.forward * Time.deltaTime * 3);
+					if( !fast ){
+						fast = true;
+						speed *= 3;
+					}
+
+
+
+				}
+			}//*/
+
+			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Ralentir) >= 0.1f)
+			{
+				if(handCursor)
+				{
+					//screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.LeftHandCursor);
+					//handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
+					//handCursor.rigidbody.AddForce(Vector3.left * 1f);
+					//handCursor.rigidbody.AddForce(Vector3.back * 1f);
+					if( fast ){
+						fast = false;
+						speed /= 3;
+					}
+					
+				}
+			}//*/
 			
 			// object-selection functionality
 			float fClickProgress = manager.GetGestureProgress(userId, KinectWrapper.Gestures.Click);
 			if(fClickProgress > 0.1f)
 			{
 				screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.Click);
-
+				
 				Vector3 hitPoint;
 				GameObject selObject = GetSelectedObject(screenNormalPos, out hitPoint);
 				
@@ -89,7 +143,7 @@ public class GesturesDemoScript : MonoBehaviour
 			if(manager.IsGestureComplete(userId, KinectWrapper.Gestures.Click, true))
 			{
 				screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.Click);
-
+				
 				Vector3 hitPoint;
 				GameObject selObject = GetSelectedObject(screenNormalPos, out hitPoint);
 				
@@ -105,7 +159,7 @@ public class GesturesDemoScript : MonoBehaviour
 						selectedObject.renderer.material = selectedObjectMaterial;
 				}
 			}
-				
+			
 			
 			// object-movement functionality
 			if(selectedObject != null && selectedObject.rigidbody != null)
@@ -168,7 +222,7 @@ public class GesturesDemoScript : MonoBehaviour
 				}
 			}
 		}
-
+		
 		return null;
 	}
 	
@@ -193,12 +247,16 @@ public class GesturesDemoScript : MonoBehaviour
 			uint userID = manager.GetPlayer1ID();
 			if(userID != 0)
 			{
-				if(selectedObject != null && selectedObject.rigidbody != null && selectedObject.rigidbody.velocity != Vector3.zero)
+				/*if(selectedObject != null && selectedObject.rigidbody != null && selectedObject.rigidbody.velocity != Vector3.zero)
 					sInfo = detectedGesture + " detected.";
 				else if(selectedObject != null)
 					sInfo = "You selected " + selectedObject.name + ". Swipe to move it left or right.";
 				else
-					sInfo = "Hold the cursor over an object to select it.";
+					sInfo = "Hold the cursor over an object to select it.";//*/
+
+				if(manager.GetGestureProgress(userID, KinectWrapper.Gestures.Push) >= 0.1f){
+					sInfo = "Geste : Push";
+				}
 			}
 			else
 			{
@@ -208,5 +266,5 @@ public class GesturesDemoScript : MonoBehaviour
 			infoGUI.guiText.text = sInfo;
 		}
 	}
-	
+
 }
