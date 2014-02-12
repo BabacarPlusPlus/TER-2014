@@ -46,7 +46,7 @@ public class MouvementVaisseau : MonoBehaviour {
 	
 	void Update() 
 	{
-		Vaisseau.avancer();
+		//Vaisseau.avancer();
 
 		handCursor.transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
