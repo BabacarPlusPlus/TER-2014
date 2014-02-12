@@ -11,9 +11,9 @@ public class SmoothFollow2 : MonoBehaviour {
 
 	public void Update() {
 		Vector3 wantedPosition;
-		if (followBehind)
+		/*if (followBehind)
 			wantedPosition = target.TransformPoint(0, height, -distance);
-		else
+		else*/
 			wantedPosition = target.TransformPoint(0, height, distance);
 
 		transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * damping);
