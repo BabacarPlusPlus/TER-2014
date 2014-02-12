@@ -1,16 +1,8 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Kinect\GesturesDemoScript.cs">
-    <Files>
-      <File FileName="Assets\Script\Kinect\GesturesDemoScript.cs" Line="1" Column="1" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Kinect\MouvementKinect.cs">
     <Files>
-      <File FileName="Assets\GesturesDemo\Scripts\GesturesDemoScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Kinect\MouvementKinect.cs" Line="4" Column="29" />
->>>>>>> 8ed020e856f060093fe369ab4ad58be6df510845
+      <File FileName="Assets\Script\Kinect\MouvementKinect.cs" Line="27" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

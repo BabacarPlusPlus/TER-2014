@@ -24,7 +24,7 @@ public class MouvementKinect : MonoBehaviour {
 
 	void Awake() 
 	{
-		speed = 5;
+		speed = 50;
 		fast = false;
 		// get needed objects´ references
 		manager = GameObject.Find("Vaisseau/Main Camera").GetComponent<KinectManager>();
@@ -48,7 +48,7 @@ public class MouvementKinect : MonoBehaviour {
 	{
 		//Vaisseau.avancer();
 
-		handCursor.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+		handCursor.transform.Translate(Vector3.back * speed * Time.deltaTime);
 
 		if(manager != null && KinectManager.IsKinectInitialized() && manager.GetPlayer1ID() > 0)
 		{
