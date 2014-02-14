@@ -1,8 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Kinect\MouvementKinect.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ia_bot.cs">
     <Files>
-      <File FileName="Assets\Script\Kinect\MouvementKinect.cs" Line="27" Column="12" />
+      <File FileName="Assets\Scripts\CanonJoueur.cs" Line="15" Column="11" />
+      <File FileName="Assets\Scripts\RocketJoueur.cs" Line="13" Column="26" />
+      <File FileName="Assets\Script\Kinect\MouvementKinect.cs" Line="61" Column="3" />
+      <File FileName="Assets\Scripts\Ia_bot.cs" Line="171" Column="21" />
+      <File FileName="Assets\Scripts\Canon.cs" Line="15" Column="20" />
+      <File FileName="Assets\Scripts\Rocket.cs" Line="43" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

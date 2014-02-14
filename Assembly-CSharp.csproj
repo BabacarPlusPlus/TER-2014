@@ -58,6 +58,7 @@
      <Compile Include="Assets\Done\Done_Scripts\Done_PlayerController.cs" />
      <Compile Include="Assets\Done\Done_Scripts\Done_RandomRotator.cs" />
      <Compile Include="Assets\Done\Done_Scripts\Done_WeaponController.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\OVR\OVRImageEffects\OVRImageEffectBase.cs" />
      <Compile Include="Assets\OVR\OVRImageEffects\OVRLensCorrection.cs" />
      <Compile Include="Assets\OVR\Scripts\OVRCamera.cs" />
@@ -100,6 +101,7 @@
      <Compile Include="Assets\Scripts\Avance.cs" />
      <Compile Include="Assets\Scripts\Base.cs" />
      <Compile Include="Assets\Scripts\Canon.cs" />
+     <Compile Include="Assets\Scripts\CanonJoueur.cs" />
      <Compile Include="Assets\Scripts\Collisions.cs" />
      <Compile Include="Assets\Scripts\Explosion.cs" />
      <Compile Include="Assets\Scripts\Ia_bot.cs" />
@@ -115,6 +117,7 @@
      <Compile Include="Assets\Scripts\Rayon.cs" />
      <Compile Include="Assets\Scripts\RayonBehavior.cs" />
      <Compile Include="Assets\Scripts\Rocket.cs" />
+     <Compile Include="Assets\Scripts\RocketJoueur.cs" />
      <Compile Include="Assets\SpaceNavigator\Plugins\QuaternionExtensions.cs" />
      <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigator.cs" />
      <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigatorNoDevice.cs" />
