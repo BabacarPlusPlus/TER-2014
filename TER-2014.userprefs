@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ia_bot.cs">
     <Files>
@@ -8,6 +9,13 @@
       <File FileName="Assets\Scripts\Ia_bot.cs" Line="171" Column="21" />
       <File FileName="Assets\Scripts\Canon.cs" Line="15" Column="20" />
       <File FileName="Assets\Scripts\Rocket.cs" Line="43" Column="3" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\SmoothFollow2.cs">
+    <Files>
+      <File FileName="Assets\Done\Done_Scripts\Done_Mover.cs" Line="10" Column="52" />
+      <File FileName="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\SmoothFollow2.cs" Line="14" Column="5" />
+>>>>>>> 8540264e2ef0c0227f461b4c9e4960394fcf2706
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
