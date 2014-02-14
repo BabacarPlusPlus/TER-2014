@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Base.cs">
     <Files>
@@ -6,6 +7,25 @@
       <File FileName="Assets\Scripts\Collisions.cs" Line="57" Column="3" />
       <File FileName="Assets\Scripts\Rocket.cs" Line="13" Column="26" />
       <File FileName="Assets\Scripts\Base.cs" Line="24" Column="1" />
+=======
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ia_bot.cs">
+    <Files>
+      <File FileName="Assets\Scripts\CanonJoueur.cs" Line="15" Column="11" />
+      <File FileName="Assets\Scripts\RocketJoueur.cs" Line="13" Column="26" />
+      <File FileName="Assets\Script\Kinect\MouvementKinect.cs" Line="61" Column="3" />
+      <File FileName="Assets\Scripts\Ia_bot.cs" Line="171" Column="21" />
+      <File FileName="Assets\Scripts\Canon.cs" Line="15" Column="20" />
+      <File FileName="Assets\Scripts\Rocket.cs" Line="43" Column="3" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\SmoothFollow2.cs">
+    <Files>
+      <File FileName="Assets\Done\Done_Scripts\Done_Mover.cs" Line="10" Column="52" />
+      <File FileName="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\SmoothFollow2.cs" Line="14" Column="5" />
+>>>>>>> 8540264e2ef0c0227f461b4c9e4960394fcf2706
+>>>>>>> f908590dc39bb99956d213562d1411174ce1deb0
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

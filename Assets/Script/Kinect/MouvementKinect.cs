@@ -22,9 +22,14 @@ public class MouvementKinect : MonoBehaviour {
 	private bool fast;
 	private int speed;
 
+	public Transform missile;	  //le missile	
+	public Transform canonDroite; //l'endroit d'ou le missile part
+	public int dureeVieMissile;   //la duree de vie du missile
+	private GameObject tirer;
+
 	void Awake() 
 	{
-		speed = 5;
+		speed = 50;
 		fast = false;
 		// get needed objects´ references
 		manager = GameObject.Find("Vaisseau/Main Camera").GetComponent<KinectManager>();
@@ -42,14 +47,41 @@ public class MouvementKinect : MonoBehaviour {
 			}
 		}
 	}
-	
+
+
+	IEnumerator wait(){
+		yield return new WaitForSeconds(dureeVieMissile);
+	}
 	
 	void Update() 
 	{
 		//Vaisseau.avancer();
 
-		handCursor.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+		//handCursor.transform.Translate(Vector3.back * speed * Time.deltaTime);
 
+		if(Input.GetKey("t"))
+			//if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TirDroite) >= 0.1f)
+		{
+			if(handCursor)
+			{
+				//screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.LeftHandCursor);
+				//handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
+				//handCursor.rigidbody.AddForce(Vector3.left * 1f);
+				//handCursor.rigidbody.AddForce(Vector3.back * 1f);
+				/*if( !fast ){
+						fast = true;
+						speed *= 3;
+					}//*/
+				
+				Debug.Log("tir droite");
+				//tirer = (GameObject)Instantiate(missile, canonDroite.position, Quaternion.identity);//*/
+				//tirer.rigidbody.AddForce(transform.forward * 3000);
+				canonDroite.GetComponent<CanonJoueur>( ).shoot=true;
+
+				
+			}
+		}//*/
+		
 		if(manager != null && KinectManager.IsKinectInitialized() && manager.GetPlayer1ID() > 0)
 		{
 			uint userId = manager.GetPlayer1ID();
@@ -70,7 +102,7 @@ public class MouvementKinect : MonoBehaviour {
 
 				}
 			}
-			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerAGauche) >= 0.1f)
+			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerAGauche) >= 0.1f)
 			{
 				if(handCursor)
 				{
@@ -82,7 +114,7 @@ public class MouvementKinect : MonoBehaviour {
 
 				}
 			}//*/
-			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Accelerer) >= 0.1f)
+			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Accelerer) >= 0.1f)
 			{
 				if(handCursor)
 				{
@@ -101,7 +133,7 @@ public class MouvementKinect : MonoBehaviour {
 				}
 			}//*/
 
-			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Ralentir) >= 0.1f)
+			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Ralentir) >= 0.1f)
 			{
 				if(handCursor)
 				{
@@ -113,6 +145,28 @@ public class MouvementKinect : MonoBehaviour {
 						fast = false;
 						speed /= 3;
 					}
+					
+				}
+			}//*/
+
+			if(Input.GetKey("t"))
+			//if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TirDroite) >= 0.1f)
+			{
+				if(handCursor)
+				{
+					//screenNormalPos = manager.GetGestureScreenPos(userId, KinectWrapper.Gestures.LeftHandCursor);
+					//handCursor.transform.position = Vector3.Lerp(handCursor.transform.position, screenNormalPos, 3 * Time.deltaTime);
+					//handCursor.rigidbody.AddForce(Vector3.left * 1f);
+					//handCursor.rigidbody.AddForce(Vector3.back * 1f);
+					/*if( !fast ){
+						fast = true;
+						speed *= 3;
+					}//*/
+
+					Debug.Log("tir droite");
+					//tirer = (GameObject)Instantiate(missile, canonDroite.position, Quaternion.identity);//*/
+					//tirer.rigidbody.AddForce(transform.forward * 3000);
+					canonDroite.GetComponent< Canon>( ).shoot=true;
 					
 				}
 			}//*/
