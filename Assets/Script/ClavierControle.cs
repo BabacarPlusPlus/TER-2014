@@ -22,6 +22,7 @@ public class ClavierControle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		j++;
 		this.gameObject.transform.Translate(Vector3.back * speed * Time.deltaTime);
 
 		//rotation droite
@@ -52,7 +53,7 @@ public class ClavierControle : MonoBehaviour {
 
 		//tir gauche
 		if(Input.GetKey("g")){
-			if((j % 20) == 0){
+			if((j % 10) == 0){
 				Debug.Log("tir droite");
 				canonDroite.GetComponent<CanonJoueur>().shoot=true;
 			}
@@ -60,7 +61,7 @@ public class ClavierControle : MonoBehaviour {
 
 		//tir droite
 		if(Input.GetKey("d")){
-			if((j % 20) == 0){
+			if((j % 10) == 0){
 				Debug.Log("tir gauche");
 				canonGauche.GetComponent<CanonJoueur>().shoot=true;
 			}
