@@ -161,10 +161,10 @@ public class Ia_bot : MonoBehaviour {
 
 	void attaqueEnnemis()
 	{
-		float distance = 60.0f;
+		float distance = 70.0f;
 		if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position)< distance))
 		{
-			if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position) > 20f))
+			if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position) > 25f))
 			{
 				this.transform.LookAt(cible.transform.position);
 				
