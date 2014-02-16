@@ -11,7 +11,9 @@ public class Rocket : MonoBehaviour {
 	private float duree_de_vie = 4.0f;
 	private float start_time;
 	private float speed = 40.0f;
-	//Vector3 endPosition = new Vector3(0.0f,0.0f,0.0f);
+	public Transform explosionRocket;
+
+
 	float t =0.0f;
 
 	void Start () {
@@ -20,6 +22,7 @@ public class Rocket : MonoBehaviour {
 
 		start_position = this.transform.position;
 		cible_position = player.transform.position;*/
+
 		start_time =  Time.time;
 	}
 	
@@ -45,6 +48,8 @@ public class Rocket : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 
+
+		Instantiate(explosionRocket,this.transform.position, this.transform.rotation);
 		if(other.tag != "detectionCollision")
 		{
 
@@ -53,6 +58,12 @@ public class Rocket : MonoBehaviour {
 				//Debug.Log(other.name);
 				//other.GetComponent< Ia_bot>( ).vie=other.GetComponent< Ia_bot>( ).vie-2f;
 			}
+			Destroy(gameObject);
+		}
+
+		if((other.tag == "baseA") ||(other.tag == "baseB"))
+		{
+			Debug.Log(other.tag);
 			Destroy(gameObject);
 		}
 	}
