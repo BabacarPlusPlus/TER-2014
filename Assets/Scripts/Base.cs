@@ -26,7 +26,8 @@ public class Base : MonoBehaviour {
 
 		if(this.vie <= 0) 
 		{
-			Instantiate(explosionBase,this.transform.position, this.transform.rotation);
+
+			Instantiate(explosionBase,this.transform.position, Quaternion.identity);
 			Destroy(gameObject);
 		}
 
