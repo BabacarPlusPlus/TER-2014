@@ -27,17 +27,20 @@ public class ClavierControle : MonoBehaviour {
 
 		//rotation droite
 		if( Input.GetAxis("Horizontal") > 0.1){
+			Debug.Log("rotation droite");
 			this.gameObject.transform.Rotate(Vector3.up * 1.5f, Space.World);
 		}//*/
 
 		//rotation gauche
 		if(Input.GetAxis("Horizontal") < -0.1){
+			Debug.Log("rotation gauche");
 			this.gameObject.transform.Rotate(Vector3.down * 1.5f, Space.World);
 		}
 	
 		//accélération
 		if( Input.GetAxis("Vertical") > 0.1){
 			if( !fast ){
+				Debug.Log("accélération");
 				fast = true;
 				speed *= 3;
 			}
@@ -46,21 +49,22 @@ public class ClavierControle : MonoBehaviour {
 		//ralentissement
 		if( Input.GetAxis("Vertical") < -0.1){	
 			if( fast ){
+				Debug.Log("ralentissement");
 				fast = false;
 				speed /= 3;
 			}
 		}
 
-		//tir gauche
-		if(Input.GetKey("g")){
+		//tir droite
+		if(Input.GetKey("d")){
 			if((j % 10) == 0){
 				Debug.Log("tir droite");
 				canonDroite.GetComponent<CanonJoueur>().shoot=true;
 			}
 		}
 
-		//tir droite
-		if(Input.GetKey("d")){
+		//tir gauche
+		if(Input.GetKey("g")){
 			if((j % 10) == 0){
 				Debug.Log("tir gauche");
 				canonGauche.GetComponent<CanonJoueur>().shoot=true;
