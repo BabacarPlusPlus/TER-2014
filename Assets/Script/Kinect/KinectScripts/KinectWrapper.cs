@@ -2400,12 +2400,12 @@ public class KinectWrapper
 			switch(gestureData.state)
 			{
 			case 0:  // gesture detection - phase 1
-				if(jointsTracked[rightHandIndex] && jointsTracked[rightElbowIndex] &&
-				   (jointsPos[rightHandIndex].y - jointsPos[rightElbowIndex].y) > -0.05f &&
-				   Mathf.Abs(jointsPos[rightHandIndex].x - jointsPos[rightElbowIndex].x) < 0.15f &&
-				   (jointsPos[rightHandIndex].z - jointsPos[rightElbowIndex].z) < -0.05f)
+				if(jointsTracked[leftHandIndex] && jointsTracked[leftElbowIndex] &&
+				   (jointsPos[leftHandIndex].y - jointsPos[leftElbowIndex].y) > -0.05f &&
+				   Mathf.Abs(jointsPos[leftHandIndex].x - jointsPos[leftElbowIndex].x) < 0.15f &&
+				   (jointsPos[leftHandIndex].z - jointsPos[leftElbowIndex].z) < -0.05f)
 				{
-					SetGestureJoint(ref gestureData, timestamp, rightHandIndex, jointsPos[rightHandIndex]);
+					SetGestureJoint(ref gestureData, timestamp, leftHandIndex, jointsPos[leftHandIndex]);
 					gestureData.progress = 0.5f;
 				}
 				break;
@@ -2413,10 +2413,10 @@ public class KinectWrapper
 			case 1:  // gesture phase 2 = complete
 				if((timestamp - gestureData.timestamp) < 1.5f)
 				{
-					bool isInPose = jointsTracked[rightHandIndex] && jointsTracked[rightElbowIndex] &&
-						Mathf.Abs(jointsPos[rightHandIndex].x - gestureData.jointPos.x) < 0.15f && 
-							Mathf.Abs(jointsPos[rightHandIndex].y - gestureData.jointPos.y) < 0.15f && 
-							(jointsPos[rightHandIndex].z - gestureData.jointPos.z) < -0.15f;
+					bool isInPose = jointsTracked[leftHandIndex] && jointsTracked[leftElbowIndex] &&
+						Mathf.Abs(jointsPos[leftHandIndex].x - gestureData.jointPos.x) < 0.15f && 
+							Mathf.Abs(jointsPos[leftHandIndex].y - gestureData.jointPos.y) < 0.15f && 
+							(jointsPos[leftHandIndex].z - gestureData.jointPos.z) < -0.15f;
 					
 					if(isInPose)
 					{

@@ -10,8 +10,6 @@ public class RocketJoueur : MonoBehaviour {
 	//private Transform transform;
 	private float duree_de_vie = 4.0f;
 	private float start_time;
-	private float speed = 10f;
-	//Vector3 endPosition = new Vector3(0.0f,0.0f,0.0f);
 	float t =0.0f;
 	
 	void Start () {
@@ -27,7 +25,7 @@ public class RocketJoueur : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		transform.Translate(-1 * transform.forward * speed * Time.deltaTime);
+		transform.Translate( transform.forward * Vaisseau.speedMissile * Time.deltaTime);
 		/*if(t < 1.0f)
 		{
 			t+= Time.deltaTime * 1.0f;
