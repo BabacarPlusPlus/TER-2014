@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 13a62624eecaa404584a3950b2aeab99
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: TI_Blast_1
+    100004: TI_Blast_2
+    100006: TI_BODY
+    100008: TI_cell
+    100010: TI_dash
+    100012: TI_DETAIL
+    100014: TI_frame
+    100016: TI_Glass
+    100018: TI_GUN
+    100020: TI_HATCH
+    100022: TI_pyron
+    100024: TI_Seat
+    100026: TI_WINDOW
+    400000: //RootNode
+    400002: TI_Blast_1
+    400004: TI_Blast_2
+    400006: TI_BODY
+    400008: TI_cell
+    400010: TI_dash
+    400012: TI_DETAIL
+    400014: TI_frame
+    400016: TI_Glass
+    400018: TI_GUN
+    400020: TI_HATCH
+    400022: TI_pyron
+    400024: TI_Seat
+    400026: TI_WINDOW
+    2300000: TI_Blast_1
+    2300002: TI_Blast_2
+    2300004: TI_BODY
+    2300006: TI_cell
+    2300008: TI_dash
+    2300010: TI_DETAIL
+    2300012: TI_frame
+    2300014: TI_Glass
+    2300016: TI_GUN
+    2300018: TI_HATCH
+    2300020: TI_pyron
+    2300022: TI_Seat
+    2300024: TI_WINDOW
+    3300000: TI_Blast_1
+    3300002: TI_Blast_2
+    3300004: TI_BODY
+    3300006: TI_cell
+    3300008: TI_dash
+    3300010: TI_DETAIL
+    3300012: TI_frame
+    3300014: TI_Glass
+    3300016: TI_GUN
+    3300018: TI_HATCH
+    3300020: TI_pyron
+    3300022: TI_Seat
+    3300024: TI_WINDOW
+    4300000: TI_Blast_1
+    4300002: TI_Blast_2
+    4300004: TI_BODY
+    4300006: TI_cell
+    4300008: TI_dash
+    4300010: TI_DETAIL
+    4300012: TI_frame
+    4300014: TI_Glass
+    4300016: TI_GUN
+    4300018: TI_HATCH
+    4300020: TI_pyron
+    4300022: TI_Seat
+    4300024: TI_WINDOW
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

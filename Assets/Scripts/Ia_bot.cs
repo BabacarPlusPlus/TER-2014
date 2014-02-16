@@ -39,23 +39,35 @@ public class Ia_bot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-	if(!detectionEnnemie())
+	
+	if(this.tag == "botA")
+			if(detectionJoueur())
+				attaqueEnnemis();;
+		
+	if(!detectionEnnemie() && !detectionBase())
 	{
-		if((!ManoeuvreGauche)&&(!ManoeuvreDroite)&(!ManoeuvreCentre))
-		{
-			deplacement_alea();
+		
+		
+			if((!ManoeuvreGauche)&&(!ManoeuvreDroite)&(!ManoeuvreCentre))
+			{
+				deplacement_alea();
 			//Debug.Log("alea");
-		}
+			}
 
 		EvitementObstacles();
+		
 	}
 
 	else {	
 
 		//améliorer
-		//detectionEnnemie();
-		attaqueEnnemis();
+		//detectionEnnemi
+				if((cible.tag == "baseA") || (cible.tag == "baseB") )
+					attaqueBase();
+				else
+					attaqueEnnemis();
+
+
 	}
 
 
@@ -159,6 +171,60 @@ public class Ia_bot : MonoBehaviour {
 	}
 
 
+	GameObject detectionBase()// objet doit elre player
+	{
+		float distance = 100.0f;
+		float min = 500f ;
+		GameObject[] Base;
+
+		if( this.tag == "botA") Base = GameObject.FindGameObjectsWithTag("baseB");
+		else if( this.tag == "botB")  Base = GameObject.FindGameObjectsWithTag("baseA");
+		else Base = GameObject.FindGameObjectsWithTag("");
+
+
+
+		foreach (GameObject go in Base) {
+			float x = this.transform.position.x - go.transform.position.x;
+			float z = this.transform.position.z - go.transform.position.z;
+
+			if((( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) <  distance ) && (( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) != 0) )
+			{
+				if( distance < min ){
+					min = Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z));
+					cible = go;
+				}
+			}
+		}
+
+		return cible;
+	}
+
+
+	GameObject detectionJoueur()// objet doit elre player
+	{
+		float distance = 30.0f;
+		float min = 500f ;
+		GameObject ennemies=null;
+		
+		if( this.tag == "botA") ennemies = GameObject.Find("Vaisseau");
+
+
+			
+		float x = this.transform.position.x - ennemies.transform.position.x;
+		float z = this.transform.position.z - ennemies.transform.position.z;
+			
+			if((( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) <  distance ) && (( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) != 0) )
+			{
+				if( distance < min ){
+					min = Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z));
+				cible = ennemies;
+				}
+			}
+				
+		//this.transform.LookAt(cible);
+		return cible;
+	}
+
 	void attaqueEnnemis()
 	{
 		float distance = 70.0f;
@@ -182,6 +248,31 @@ public class Ia_bot : MonoBehaviour {
 			}
 		}
 
+	}
+
+	void attaqueBase()
+	{
+		float distance = 150.0f;
+		if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position)< distance))
+		{
+			if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position) > 50f))
+			{
+				this.transform.LookAt(cible.transform.position);
+				
+				if (i % 10 == 0)
+				{
+					
+					//Vector3 pos= new Vector3(this.transform.position.x,this.transform.position.y,this.transform.position.z);
+					//Instantiate(rocket,pos, this.transform.rotation);
+					Transform viseur = transform.FindChild("viseur");
+					viseur.GetComponent< Canon>( ).shoot=true;
+					
+				}
+				//Instantiate(rocket,this.transform.position, this.transform.rotation);
+				//Debug.Log("tir: "+cible.name);
+			}
+		}
+		
 	}
 
 	void EvitementObstacles()
