@@ -18,10 +18,10 @@ public class Base : MonoBehaviour {
 	void Update () {
 		i++;
 
-		if((i % 250== 0) &&(numberBot() < 20))
+		if((i % 250== 0) &&(numberBot() < 30))
 		{
 			createBot();
-			//Debug.Log (this.name+" : "+numberBot());
+			Debug.Log (this.name+" : "+numberBot());
 		}
 
 		if(this.vie <= 0) 
@@ -68,6 +68,13 @@ public class Base : MonoBehaviour {
 			Debug.Log(other.name);
 			//
 			this.vie=this.vie - 0.2f;
+		}
+
+		if(other.name == "rocketjoueur(Clone)")
+		{
+			//Debug.Log(other.name);
+			//
+			this.vie=this.vie - 5f;
 		}
 	}
 

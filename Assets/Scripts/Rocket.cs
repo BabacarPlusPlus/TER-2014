@@ -10,7 +10,7 @@ public class Rocket : MonoBehaviour {
 	//private Transform transform;
 	private float duree_de_vie = 4.0f;
 	private float start_time;
-	private float speed = 40.0f;
+	private float speed = 100.0f;
 	public Transform explosionRocket;
 
 
