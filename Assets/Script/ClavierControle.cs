@@ -55,7 +55,18 @@ public class ClavierControle : MonoBehaviour {
 			}
 		}
 
+
 		//tir droite
+
+		//Avec le clique
+		if(Input.GetButton("Fire2")){
+			if((j % 10) == 0){
+				Debug.Log("tir droite");
+				canonDroite.GetComponent<CanonJoueur>().shoot=true;
+			}
+		}
+
+		// Avec le clavier
 		if(Input.GetKey("d")){
 			if((j % 10) == 0){
 				Debug.Log("tir droite");
@@ -63,7 +74,19 @@ public class ClavierControle : MonoBehaviour {
 			}
 		}
 
+
+
 		//tir gauche
+
+		//Avec le clique
+		if(Input.GetButton("Fire1")){
+			if((j % 10) == 0){
+				Debug.Log("tir gauche");
+				canonGauche.GetComponent<CanonJoueur>().shoot=true;
+			}
+		}
+
+		//Avec le clavier
 		if(Input.GetKey("g")){
 			if((j % 10) == 0){
 				Debug.Log("tir gauche");

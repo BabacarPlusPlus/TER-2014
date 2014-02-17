@@ -1,36 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ClavierControle.cs">
     <Files>
-      <File FileName="Assets\Script\ClavierControle.cs" Line="68" Column="4" />
-      <File FileName="Assets\Scripts\Ia_bot.cs" Line="1" Column="1" />
-      <File FileName="TER-2014.sln" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Base.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Collisions.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Rocket.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ClavierControle.cs">
-    <Files>
-      <File FileName="Assets\Script\ClavierControle.cs" Line="66" Column="15" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Base.cs">
-    <Files>
-      <File FileName="TER-2014.sln" Line="89" Column="1" />
-      <File FileName="Assets\Scripts\Base.cs" Line="24" Column="6" />
-      <File FileName="Assets\Scripts\Ia_bot.cs" Line="207" Column="27" />
-      <File FileName="Assets\Scripts\Collisions.cs" Line="3" Column="8" />
-      <File FileName="Assets\Scripts\Rocket.cs" Line="56" Column="23" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ClavierControle.cs">
-    <Files>
-      <File FileName="Assets\Script\ClavierControle.cs" Line="64" Column="13" />
->>>>>>> 1fc93c4044d300473b3f145b70bc145cef2fc53d
->>>>>>> 7da9a35575371ca6e39eee6d51c35a6775e05d0b
->>>>>>> 02eaecd3f101d436363b7f7c21815160c3f6c741
+      <File FileName="Assets\Done\Done_Scripts\DPC2.cs" Line="11" Column="19" />
+      <File FileName="Assets\Script\ClavierControle.cs" Line="82" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
