@@ -1,4 +1,19 @@
 ﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Degat.cs">
+    <Files>
+<<<<<<< HEAD
+      <File FileName="Assets\Scripts\RocketJoueur.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Kinect\KinectScripts\KinectWrapper.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MouvementKinect.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Vaisseau.cs" Line="8" Column="27" />
+      <File FileName="Assets\Script\ClavierControle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Degat.cs" Line="22" Column="33" />
+      <File FileName="Assets\Scripts\Ia_bot.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Done\Done_Scripts\DPC2.cs" Line="11" Column="19" />
+      <File FileName="Assets\Script\ClavierControle.cs" Line="82" Column="28" />
+=======
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ia_bot.cs">
     <Files>
@@ -6,6 +21,8 @@
       <File FileName="Assets\Scripts\Canon.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Ia_bot.cs" Line="364" Column="25" />
       <File FileName="Assets\Scripts\Rocket.cs" Line="13" Column="27" />
+>>>>>>> b8b5e2bf3fe5ffa6f4fefb677c2af759af8ed55c
+>>>>>>> 03f011a89bde03435326606cccef1b30e0bb1754
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

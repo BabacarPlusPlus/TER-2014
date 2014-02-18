@@ -28,7 +28,7 @@ public class MouvementKinect : MonoBehaviour {
 		// get needed objects´ references
 		manager = GameObject.Find("Vaisseau/Main Camera").GetComponent<KinectManager>();
 
-		infoGUI = GameObject.Find("HandGuiText");
+		//infoGUI = GameObject.Find("HandGuiText");
 		
 
 	}
@@ -52,13 +52,13 @@ public class MouvementKinect : MonoBehaviour {
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerADroite	) >= 0.1f)
 			{
 
-				this.gameObject.transform.Rotate(Vector3.down * 1.5f, Space.World);
+				this.gameObject.transform.Rotate(Vector3.up * 1.5f, Space.World);
 
 			}
 
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerAGauche) >= 0.1f)
 			{
-				this.gameObject.transform.Rotate(Vector3.up * 1.5f, Space.World);
+				this.gameObject.transform.Rotate(Vector3.down * 1.5f, Space.World);
 
 			}//*/
 
