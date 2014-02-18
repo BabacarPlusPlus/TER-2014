@@ -4,4 +4,18 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scene/Intro 1.unity
+  - enabled: 1
+    path: Assets/Scene/Intro 2.unity
+  - enabled: 1
+    path: Assets/Scene/Intro 3.unity
+  - enabled: 1
+    path: Assets/Scene/Intro 4.unity
+  - enabled: 1
+    path: Assets/Scene/Jeu.unity
+  - enabled: 1
+    path: Assets/Scene/KinectSample.unity
+  - enabled: 1
+    path: Assets/Scene/Menu.unity
