@@ -520,6 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7de5b9bbf95df24185e1807e650463c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 400010, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
 --- !u!1 &51279229
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!132 &51279230
 GUIText:
   m_ObjectHideFlags: 0
@@ -3704,6 +3705,10 @@ Prefab:
       propertyPath: m_Name
       value: Vaisseau
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 51f413747029ad3489e986b5163670de, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 51f413747029ad3489e986b5163670de, type: 3}
   m_RootGameObject: {fileID: 43551451}
@@ -4788,8 +4793,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811625705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.1350403, y: -.00523471832, z: -45.5512581}
-  m_LocalScale: {x: 6.21999979, y: 45.7700005, z: 831.25}
+  m_LocalPosition: {x: 563.921509, y: -.00523471832, z: -506.394653}
+  m_LocalScale: {x: 21.5680561, y: 158.057632, z: 3452.03516}
   m_Children:
   - {fileID: 157865024}
   - {fileID: 1405931883}
@@ -5475,7 +5480,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993414585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00db858c1f8ff90478dad0aa1bac9a2c, type: 3}
   m_Name: 

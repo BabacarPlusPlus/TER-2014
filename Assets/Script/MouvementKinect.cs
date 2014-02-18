@@ -28,7 +28,7 @@ public class MouvementKinect : MonoBehaviour {
 		// get needed objects´ references
 		manager = GameObject.Find("Vaisseau/Main Camera").GetComponent<KinectManager>();
 
-		//infoGUI = GameObject.Find("HandGuiText");
+		infoGUI = GameObject.Find("HandGuiText");
 		
 
 	}
@@ -64,15 +64,17 @@ public class MouvementKinect : MonoBehaviour {
 
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Accelerer) >= 0.1f)
 			{
-			
+
 				if( !fast ){
 					fast = true;
 					speed *= 3;
+
 				}
+				Debug.Log("après accelere : " + speed);
 
 			}//*/
 
-			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Ralentir) <= 0.1f)
+			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Ralentir) <= 0.1f)
 			{
 
 				if( fast ){
@@ -118,7 +120,8 @@ public class MouvementKinect : MonoBehaviour {
 			{
 			
 				if(manager.GetGestureProgress(userID, KinectWrapper.Gestures.Accelerer) >= 0.1f){
-					sInfo += "Geste : Accelerer\n";
+					//sInfo += "Geste : Accelerer\n";
+					sInfo += speed + "\n";
 				}
 
 				if(manager.GetGestureProgress(userID, KinectWrapper.Gestures.Ralentir) >= 0.1f){
