@@ -356,6 +356,13 @@ public class Ia_bot : MonoBehaviour {
 			//
 			this.vie=this.vie - 0.2f;
 		}
+
+		if(other.name == "rocketjoueur(Clone)")
+		{
+			//Debug.Log(other.name);
+			//
+			this.vie=this.vie - 4f;
+		}
 	}
 }
 
