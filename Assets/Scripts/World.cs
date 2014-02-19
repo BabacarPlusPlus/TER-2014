@@ -26,7 +26,6 @@ public class World : MonoBehaviour {
 		if((Distance () > 1000 ) && (Distance () < 1300) )
 		{
 			DistanceText.enabled = true	;
-			Debug.Log(Distance());
 		}
 
 		if(Distance () < 1000 ) 
@@ -37,7 +36,6 @@ public class World : MonoBehaviour {
 		if(Distance () > 1300 ) 
 			Application.LoadLevel("Intro 4");
 
-		Debug.Log(Distance());
 	}
 
 	float Distance () 

@@ -32,9 +32,9 @@ public class Degat : MonoBehaviour {
 				k = j;
 				WAIT = false;//*/
 			}
-			if( (j - k) > 30){
-				Application.LoadLevel("Jeu");
-			}
+
+			//Application.LoadLevel("Jeu");
+		
 		}
 	}
 

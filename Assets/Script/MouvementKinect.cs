@@ -70,7 +70,7 @@ public class MouvementKinect : MonoBehaviour {
 					speed *= 3;
 
 				}
-				Debug.Log("après accelere : " + speed);
+			
 
 			}//*/
 
@@ -88,7 +88,6 @@ public class MouvementKinect : MonoBehaviour {
 			{
 
 				if((j % 20) == 0){
-					Debug.Log("tir droite");
 					canonDroite.GetComponent<CanonJoueur>().shoot=true;
 				}
 
@@ -99,7 +98,6 @@ public class MouvementKinect : MonoBehaviour {
 			{
 
 				if((j % 20) == 0){
-					Debug.Log("tir gauche");
 					canonGauche.GetComponent<CanonJoueur>().shoot=true;
 				}					
 
