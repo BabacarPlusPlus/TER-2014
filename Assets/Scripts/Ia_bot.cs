@@ -209,19 +209,20 @@ public class Ia_bot : MonoBehaviour {
 		
 		if( this.tag == "botA") ennemies = GameObject.Find("Vaisseau");
 
-
+		if(ennemies)
+		{
 			
-		float x = this.transform.position.x - ennemies.transform.position.x;
-		float z = this.transform.position.z - ennemies.transform.position.z;
-			
-			if((( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) <  distance ) && (( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) != 0) )
-			{
-				if( distance < min ){
-					min = Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z));
-				cible = ennemies;
-				}
-			}
+			float x = this.transform.position.x - ennemies.transform.position.x;
+			float z = this.transform.position.z - ennemies.transform.position.z;
 				
+				if((( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) <  distance ) && (( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) != 0) )
+				{
+					if( distance < min ){
+						min = Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z));
+					cible = ennemies;
+					}
+				}
+		}
 		//this.transform.LookAt(cible);
 		return cible;
 	}

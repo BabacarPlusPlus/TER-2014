@@ -44,8 +44,9 @@ public class World : MonoBehaviour {
 	{
 		GameObject vaisseau = GameObject.Find("Vaisseau");
 		GameObject centre = GameObject.Find("World");
-
-		float distance = Vector3.Distance(vaisseau.transform.position, centre.transform.position);
+		float distance=0f;
+		if( vaisseau )
+			distance = Vector3.Distance(vaisseau.transform.position, centre.transform.position);
 		return distance;
 	}
 
