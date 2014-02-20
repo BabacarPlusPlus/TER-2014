@@ -221,6 +221,7 @@ public class Ia_bot : MonoBehaviour {
 				cible = ennemies;
 				}
 			}
+
 				
 		//this.transform.LookAt(cible);
 		return cible;
