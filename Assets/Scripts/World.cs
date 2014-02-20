@@ -26,7 +26,6 @@ public class World : MonoBehaviour {
 		if((Distance () > 1000 ) && (Distance () < 1300) )
 		{
 			DistanceText.enabled = true	;
-			Debug.Log(Distance());
 		}
 
 		if(Distance () < 1000 ) 
@@ -37,15 +36,15 @@ public class World : MonoBehaviour {
 		if(Distance () > 1300 ) 
 			Application.LoadLevel("Intro 4");
 
-		Debug.Log(Distance());
 	}
 
 	float Distance () 
 	{
 		GameObject vaisseau = GameObject.Find("Vaisseau");
 		GameObject centre = GameObject.Find("World");
-
-		float distance = Vector3.Distance(vaisseau.transform.position, centre.transform.position);
+		float distance=0f;
+		if( vaisseau )
+			distance = Vector3.Distance(vaisseau.transform.position, centre.transform.position);
 		return distance;
 	}
 

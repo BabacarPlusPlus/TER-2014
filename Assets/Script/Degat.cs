@@ -6,22 +6,35 @@ public class Degat : MonoBehaviour {
 	private int vie;
 	public Transform explosion;
 	private bool WAIT;
+	private float start;
+	private bool fin;
+	private int j;
+	private int k;
 
 	void Awake () {
+		j = 0;
 		WAIT = false;
 		vie = Vaisseau.vie;
-		if(WAIT){
-			StartCoroutine(wait());	
-		}
+		start = Time.time;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		j++;
 		if(vie <= 0){
 			Debug.Log("Perdu");
-			this.transform.FindChild("ARC_170_LEE_RAY_polySurface1394").GetComponent<MeshRenderer>().enabled = false;
+			this.transform.FindChild("Main Camera").transform.parent = null;
+			Destroy(this.gameObject);
 			Instantiate(explosion,this.transform.position, this.transform.rotation);
-			Application.LoadLevel("Jeu");	
+			WAIT = true;
+			if(WAIT){
+				k = j;
+				WAIT = false;//*/
+			}
+
+			//Application.LoadLevel("Jeu");
+		
 		}
 	}
 
@@ -35,7 +48,9 @@ public class Degat : MonoBehaviour {
 
 	IEnumerator wait(){
 		Debug.Log("attend");
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(1f);
+		Debug.Log("fin");
+		fin = true;
 	}
 
 }
