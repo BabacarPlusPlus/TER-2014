@@ -10,8 +10,15 @@ public class Degat : MonoBehaviour {
 	private bool fin;
 	private int j;
 	private int k;
+	private int i;
+
+
+	public GameObject[] guiTextureVie;
+	public GameObject vie0;
+	public GUIText affichageVie;
 
 	void Awake () {
+		i = 1;
 		j = 0;
 		WAIT = false;
 		vie = Vaisseau.vie;
@@ -21,8 +28,11 @@ public class Degat : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		j++;
+
+
 		if(vie <= 0){
+			guiTextureVie[6].SetActive(false);
+			vie0.SetActive(true);
 			Debug.Log("Perdu");
 			this.transform.FindChild("Main Camera").transform.parent = null;
 			Destroy(this.gameObject);
@@ -40,10 +50,23 @@ public class Degat : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if(other.CompareTag("rocket")){
-			vie--;	
-			Debug.Log(vie);
+
+			guiTextureVie[i % guiTextureVie.Length].SetActive(true);
+			guiTextureVie[(i-1) % guiTextureVie.Length].SetActive(false);
+
+
+			i++;
+			if( (i % 7) == 0){
+				vie--;
+			}
+			Debug.Log("*****************  i : " + i +"  *****************");
 
 		}
+	}
+
+	void OnGUI()
+	{
+		affichageVie.text = "Vie : " + vie.ToString();
 	}
 
 	IEnumerator wait(){
