@@ -2248,22 +2248,19 @@ public class KinectWrapper
 				}
 				break;
 
-		case Gestures.TournerADroite:
+		case Gestures.TournerAGauche:
 			switch(gestureData.state)
 			{
 			case 0:  // gesture detection - phase 1 (perpetual)
-				if(jointsTracked[rightHandIndex] && jointsTracked[leftHipIndex] &&
-				   jointsTracked[leftShoulderIndex] && jointsTracked[leftElbowIndex] &&
+				if(jointsTracked[leftHandIndex] && jointsTracked[leftHipIndex] &&
+				   jointsTracked[leftShoulderIndex] && //jointsTracked[leftElbowIndex] &&
 				   (jointsPos[leftHandIndex].y - jointsPos[leftHipIndex].y) > -0.1f &&
-				   //(jointsPos[leftHandIndex].z <= jointsPos[leftShoulderIndex].z - 0.5f) &&
-				   //(jointsPos[leftHandIndex].z >= jointsPos[leftShoulderIndex].z - 0.5f)
-				   (jointsPos[leftHandIndex].z - jointsPos[leftShoulderIndex].z) > -0.05f
+				   (jointsPos[leftHandIndex].z - jointsPos[leftShoulderIndex].z) > -0.005f
 				   
 				   )
 				{
-					gestureData.joint = rightHandIndex;
+					gestureData.joint = leftHandIndex;
 					gestureData.timestamp = timestamp;
-					//gestureData.jointPos = jointsPos[rightHandIndex];
 					SetScreenPos(userId, ref gestureData, ref jointsPos, ref jointsTracked);
 					gestureData.progress = 0.7f;
 				}
@@ -2280,14 +2277,15 @@ public class KinectWrapper
 			
 
 
-		case Gestures.TournerAGauche:
+		case Gestures.TournerADroite:
 			switch(gestureData.state)
 			{
 			case 0:  // gesture detection - phase 1 (perpetual)
 				if(jointsTracked[rightHandIndex] && jointsTracked[rightHipIndex] &&
-				   jointsTracked[rightShoulderIndex] && jointsTracked[rightElbowIndex] &&
+				   jointsTracked[rightShoulderIndex] && //jointsTracked[rightElbowIndex] &&
 				   (jointsPos[rightHandIndex].y - jointsPos[rightHipIndex].y) > -0.1f &&
-				   (jointsPos[rightHandIndex].z - jointsPos[rightShoulderIndex].z) > -0.05f
+				   (jointsPos[rightHandIndex].z - jointsPos[rightShoulderIndex].z) > -0.005f 
+				   //(jointsPos[rightHandIndex].z - jointsPos[rightShoulderIndex].z) > -0.2f
 				    
 				    )
 				{
@@ -2310,9 +2308,8 @@ public class KinectWrapper
 			switch(gestureData.state)
 			{
 			case 0:  // gesture detection - phase 1 (perpetual)
-				if(jointsTracked[shoulderCenterIndex] && jointsTracked[leftHipIndex] &&
-				   jointsTracked[shoulderCenterIndex] && jointsTracked[leftHipIndex] &&
-				   (jointsPos[shoulderCenterIndex].z - jointsPos[leftHipIndex].z) < -0.05f
+				if(jointsTracked[shoulderCenterIndex] && jointsTracked[hipCenterIndex] &&
+				   (jointsPos[shoulderCenterIndex].z - jointsPos[hipCenterIndex].z) < -0.05f
 				   
 				   )
 				{

@@ -52,27 +52,29 @@ public class MouvementKinect : MonoBehaviour {
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerADroite	) >= 0.1f)
 			{
 
-				this.gameObject.transform.Rotate(Vector3.down * 1.5f, Space.World);
+				this.gameObject.transform.Rotate(Vector3.up * 1.5f, Space.World);
 
 			}
 
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TournerAGauche) >= 0.1f)
 			{
-				this.gameObject.transform.Rotate(Vector3.up * 1.5f, Space.World);
+				this.gameObject.transform.Rotate(Vector3.down * 1.5f, Space.World);
 
 			}//*/
 
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Accelerer) >= 0.1f)
 			{
-			
+
 				if( !fast ){
 					fast = true;
 					speed *= 3;
+
 				}
+			
 
 			}//*/
 
-			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Ralentir) <= 0.1f)
+			else if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.Ralentir) <= 0.1f)
 			{
 
 				if( fast ){
@@ -86,7 +88,6 @@ public class MouvementKinect : MonoBehaviour {
 			{
 
 				if((j % 20) == 0){
-					Debug.Log("tir droite");
 					canonDroite.GetComponent<CanonJoueur>().shoot=true;
 				}
 
@@ -97,7 +98,6 @@ public class MouvementKinect : MonoBehaviour {
 			{
 
 				if((j % 20) == 0){
-					Debug.Log("tir gauche");
 					canonGauche.GetComponent<CanonJoueur>().shoot=true;
 				}					
 
@@ -118,7 +118,8 @@ public class MouvementKinect : MonoBehaviour {
 			{
 			
 				if(manager.GetGestureProgress(userID, KinectWrapper.Gestures.Accelerer) >= 0.1f){
-					sInfo += "Geste : Accelerer\n";
+					//sInfo += "Geste : Accelerer\n";
+					sInfo += speed + "\n";
 				}
 
 				if(manager.GetGestureProgress(userID, KinectWrapper.Gestures.Ralentir) >= 0.1f){
