@@ -211,7 +211,7 @@ public class Ia_bot : MonoBehaviour {
 
 		if(ennemies)
 		{
-			
+
 			float x = this.transform.position.x - ennemies.transform.position.x;
 			float z = this.transform.position.z - ennemies.transform.position.z;
 				
