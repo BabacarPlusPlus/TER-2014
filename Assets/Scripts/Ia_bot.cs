@@ -211,20 +211,11 @@ public class Ia_bot : MonoBehaviour {
 
 		if(ennemies)
 		{
-			
-<<<<<<< HEAD
-			if((( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) <  distance ) && (( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) != 0) )
-			{
-				if( distance < min ){
-					min = Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z));
-				cible = ennemies;
-				}
-			}
 
-=======
+
 			float x = this.transform.position.x - ennemies.transform.position.x;
 			float z = this.transform.position.z - ennemies.transform.position.z;
->>>>>>> aac9e8989a32c7bdc22eb8e17b5c70c948148cf8
+
 				
 				if((( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) <  distance ) && (( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) != 0) )
 				{
