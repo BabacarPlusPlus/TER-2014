@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Degat.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Kinect\KinectScripts\KinectWrapper.cs">
     <Files>
-      <File FileName="Assets\Script\Degat.cs" Line="35" Column="25" />
+      <File FileName="Assets\Script\Degat.cs" Line="33" Column="15" />
+      <File FileName="Assets\Script\Kinect\KinectScripts\KinectWrapper.cs" Line="2321" Column="22" />
+      <File FileName="Assets\Script\Vaisseau.cs" Line="7" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
