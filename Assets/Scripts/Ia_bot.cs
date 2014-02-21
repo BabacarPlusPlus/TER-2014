@@ -212,8 +212,15 @@ public class Ia_bot : MonoBehaviour {
 		if(ennemies)
 		{
 
+<<<<<<< HEAD
+
 			float x = this.transform.position.x - ennemies.transform.position.x;
 			float z = this.transform.position.z - ennemies.transform.position.z;
+
+=======
+			float x = this.transform.position.x - ennemies.transform.position.x;
+			float z = this.transform.position.z - ennemies.transform.position.z;
+>>>>>>> f120091498b71faa404234a0c231f29fd056c84b
 				
 				if((( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) <  distance ) && (( Mathf.Sqrt( Mathf.Abs (x) * Mathf.Abs (x) + Mathf.Abs (z) * Mathf.Abs (z))) != 0) )
 				{

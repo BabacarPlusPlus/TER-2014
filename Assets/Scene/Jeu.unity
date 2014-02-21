@@ -413,8 +413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   tilt: 0
-  shot: {fileID: 100000, guid: f4ec271e525e14ca9927a07e6a2e153d, type: 2}
-  shotSpawn: {fileID: 124761151}
+  shot: {fileID: 0}
+  shotSpawn: {fileID: 0}
   fireRate: 0
 --- !u!82 &43551455
 AudioSource:
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   tilt: 0
-  shot: {fileID: 0}
+  shot: {fileID: 100000, guid: a2dfc923823c2c2469546cd62adda4c1, type: 2}
   shotSpawn2: {fileID: 0}
   fireRate: 0
 --- !u!114 &43551457
@@ -501,9 +501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e5e6944974d5d429bbe879e6da2089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missile: {fileID: 400000, guid: a2dfc923823c2c2469546cd62adda4c1, type: 2}
-  canonDroite: {fileID: 1949339596}
-  canonGauche: {fileID: 1784339847}
+  missile: {fileID: 0}
+  canonDroite: {fileID: 0}
+  canonGauche: {fileID: 0}
 --- !u!114 &43551458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,9 +515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9a4fe53cb38bb2419c155072f86ce3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missile: {fileID: 400000, guid: a2dfc923823c2c2469546cd62adda4c1, type: 2}
-  canonDroite: {fileID: 1949339596}
-  canonGauche: {fileID: 1784339847}
+  missile: {fileID: 0}
+  canonDroite: {fileID: 0}
+  canonGauche: {fileID: 0}
 --- !u!54 &43551459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -556,6 +556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7de5b9bbf95df24185e1807e650463c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  explosion: {fileID: 0}
+=======
   explosion: {fileID: 400010, guid: 3455fe69f7ddc4604b95bf9b0a1e88d7, type: 2}
   guiTextureVie:
   - {fileID: 231525556}
@@ -567,6 +570,7 @@ MonoBehaviour:
   - {fileID: 1094535083}
   vie0: {fileID: 717561712}
   affichageVie: {fileID: 1674532587}
+>>>>>>> f120091498b71faa404234a0c231f29fd056c84b
 --- !u!1 &51279229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5933,7 +5937,7 @@ MonoBehaviour:
   Player2Avatars: []
   Player1CalibrationPose: 0
   Player2CalibrationPose: 0
-  Player1Gestures: 140000001500000016000000170000001800000019000000
+  Player1Gestures: 
   Player2Gestures: 
   MinTimeBetweenGestures: 0
   CalibrationText: {fileID: 0}
@@ -13555,7 +13559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbdab20419b9224a9c019edd88d73f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocket: {fileID: 400000, guid: a2dfc923823c2c2469546cd62adda4c1, type: 2}
+  rocket: {fileID: 0}
   shoot: 0
 --- !u!1 &1803308559
 GameObject:
@@ -15348,7 +15352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbdab20419b9224a9c019edd88d73f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocket: {fileID: 400000, guid: a2dfc923823c2c2469546cd62adda4c1, type: 2}
+  rocket: {fileID: 0}
   shoot: 0
 --- !u!1 &1949473963
 GameObject:
