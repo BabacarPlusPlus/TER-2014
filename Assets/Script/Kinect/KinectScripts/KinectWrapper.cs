@@ -1,4 +1,4 @@
-// comment or uncomment the following #define directives
+	// comment or uncomment the following #define directives
 // depending on whether you use KinectExtras together with KinectManager
 
 //#define USE_KINECT_INTERACTION_OR_FACETRACKING
@@ -2253,7 +2253,7 @@ public class KinectWrapper
 			{
 			case 0:  // gesture detection - phase 1 (perpetual)
 				if(jointsTracked[leftHandIndex] && jointsTracked[leftHipIndex] &&
-				   jointsTracked[leftShoulderIndex] && //jointsTracked[leftElbowIndex] &&
+				   jointsTracked[leftShoulderIndex] && 
 				   (jointsPos[leftHandIndex].y - jointsPos[leftHipIndex].y) > -0.1f &&
 				   (jointsPos[leftHandIndex].z - jointsPos[leftShoulderIndex].z) > -0.005f
 				   
@@ -2282,11 +2282,9 @@ public class KinectWrapper
 			{
 			case 0:  // gesture detection - phase 1 (perpetual)
 				if(jointsTracked[rightHandIndex] && jointsTracked[rightHipIndex] &&
-				   jointsTracked[rightShoulderIndex] && //jointsTracked[rightElbowIndex] &&
+				   jointsTracked[rightShoulderIndex] && 
 				   (jointsPos[rightHandIndex].y - jointsPos[rightHipIndex].y) > -0.1f &&
 				   (jointsPos[rightHandIndex].z - jointsPos[rightShoulderIndex].z) > -0.005f 
-				   //(jointsPos[rightHandIndex].z - jointsPos[rightShoulderIndex].z) > -0.2f
-				    
 				    )
 				{
 					gestureData.joint = rightHandIndex;
