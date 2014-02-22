@@ -21,7 +21,7 @@ public class Base : MonoBehaviour {
 		if((i % 250== 0) &&(numberBot() < 30))
 		{
 			createBot();
-			Debug.Log (this.name+" : "+numberBot());
+			//Debug.Log (this.name+" : "+numberBot());
 		}
 
 		if(this.vie <= 0) 

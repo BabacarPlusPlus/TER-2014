@@ -1,12 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Degat.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\World.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\Scripts\Pause.cs" Line="57" Column="2" />
-=======
-      <File FileName="Assets\Script\Degat.cs" Line="35" Column="25" />
->>>>>>> a2c09e9a1110bd9af5395f02c57598f5f4e0a975
+      <File FileName="Assets\Scripts\World.cs" Line="106" Column="19" />
+      <File FileName="Assets\Scripts\Base.cs" Line="24" Column="6" />
+      <File FileName="Assets\Scripts\Pause.cs" Line="39" Column="27" />
+      <File FileName="Assets\Script\Vaisseau.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
