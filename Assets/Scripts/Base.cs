@@ -41,7 +41,7 @@ public class Base : MonoBehaviour {
 		if(RanD > 0 ) RanD =35;
 		else RanD =-35;
 
-		Vector3 pos = new Vector3 (this.transform.position.x+RanD,this.transform.position.y-15,this.transform.position.z);
+		Vector3 pos = new Vector3 (this.transform.position.x+RanD,this.transform.position.y,this.transform.position.z);
 		if(this.name == "baseA")
 			Instantiate(botA,pos, this.transform.rotation);
 		if(this.name == "baseB")
@@ -70,11 +70,11 @@ public class Base : MonoBehaviour {
 			this.vie=this.vie - 0.2f;
 		}
 
-		if(other.name == "rocketjoueur(Clone)")
+		if(other.name == "rocketJoueur(Clone)")
 		{
 			//Debug.Log(other.name);
 			//
-			this.vie=this.vie - 5f;
+			this.vie=this.vie - 1f;
 		}
 	}
 
