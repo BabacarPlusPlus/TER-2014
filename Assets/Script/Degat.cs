@@ -30,11 +30,11 @@ public class Degat : MonoBehaviour {
 	void Update () {
 
 
-		if(vie <= 0){
+		if(vie <= -1){
 			guiTextureVie[6].SetActive(false);
 			vie0.SetActive(true);
-			Debug.Log("Perdu");
 			this.transform.FindChild("Main Camera").transform.parent = null;
+			Debug.Log("Perdu");
 			Destroy(this.gameObject);
 			Instantiate(explosion,this.transform.position, this.transform.rotation);
 			WAIT = true;
