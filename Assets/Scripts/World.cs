@@ -4,24 +4,38 @@ using System.Collections;
 public class World : MonoBehaviour {
 
 	// Use this for initialization
-	public GUIText GameOverText ;
-	public GUIText Victoire ;
+	/*public GUIText GameOverText ;
+	public GUIText Victoire ;*/
 	public GUIText DistanceText ;
 
+	public GUITexture image;
+	public GUITexture Logo;
+	public GUIText gameover; 
+	public GUIText quitter;
+	public GUIText win;
+	public GUIText limites;
+	public GUIText recommencer;
+	public bool pause=false;
+
 	void Start () {
-		GameOverText.enabled = false;
-		Victoire.enabled = false;
-		DistanceText.enabled = false;
+		gameover.enabled = false;
+		quitter.enabled = false;
+		win.enabled = false;
+		limites.enabled = false;
+		recommencer.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 		if(enDOfbaseAllie())
-			GameOverText.enabled = true;
-
+			printGameOver();
+		
 		if(enDOfbaseEnnemie())
-			Victoire.enabled =  true;
+			printVictory();
+
+		if(getVieVaisseau() <=0 )
+			printGameOver();
 
 		if((Distance () > 1000 ) && (Distance () < 1300) )
 		{
@@ -33,8 +47,14 @@ public class World : MonoBehaviour {
 			DistanceText.enabled = false	;
 		}
 
-		if(Distance () > 1300 ) 
-			Application.LoadLevel("Intro 4");
+		if(Distance () > 1300 ) {
+			Time.timeScale = 0.0f;
+			printGameOver();
+			limites.enabled = true;
+			//Application.LoadLevel("Jeu");
+
+		}
+
 
 	}
 
@@ -62,5 +82,27 @@ public class World : MonoBehaviour {
 		if(baseA.GetComponent< Base >( ).vie <= 0)
 			return true;
 		else return false;
+	}
+
+	void printGameOver(){
+		Time.timeScale = 0.0f;
+		gameover.enabled = true;
+		quitter.enabled = true;
+		image.enabled = true;
+		Logo.enabled = true;
+		recommencer.enabled = true;
+	}
+
+	void printVictory(){
+		Time.timeScale = 0.0f;
+		win.enabled = true;
+		quitter.enabled = true;
+		image.enabled = true;
+		Logo.enabled = true;
+		recommencer.enabled = true;
+	}
+
+	int getVieVaisseau(){
+		return Vaisseau.vie;
 	}
 }
