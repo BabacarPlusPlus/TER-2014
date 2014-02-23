@@ -74,6 +74,52 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
+--- !u!1 &7815332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 7815334}
+  - 131: {fileID: 7815333}
+  m_Layer: 0
+  m_Name: VaisseauVie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!131 &7815333
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7815332}
+  m_Enabled: 1
+  m_Texture: {fileID: 2800000, guid: 35c23ab51494b4a438afa14deaf23766, type: 3}
+  m_Color: {r: .5, g: .5, b: .5, a: .5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: -64
+    y: -29
+    width: 128
+    height: 58
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
+--- !u!4 &7815334
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7815332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1541.06995, y: -2228.62012, z: -4847.46387}
+  m_LocalScale: {x: -.0299999993, y: 0, z: 1}
+  m_Children: []
+  m_Father: {fileID: 20890077}
 --- !u!1 &13702083
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +262,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1674532588}
+  - {fileID: 7815334}
   - {fileID: 231525557}
   - {fileID: 1646343774}
   - {fileID: 620500155}
@@ -5907,7 +5954,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993414585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00db858c1f8ff90478dad0aa1bac9a2c, type: 3}
   m_Name: 
@@ -12514,7 +12561,7 @@ GUIText:
   m_GameObject: {fileID: 1674532586}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Vie : 1'
+  m_Text: 1
   m_Anchor: 0
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -12536,7 +12583,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1674532586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1541.09998, y: -2228.56006, z: -4847.46387}
+  m_LocalPosition: {x: -1541.03003, y: -2228.56006, z: -4847.46387}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 20890077}
