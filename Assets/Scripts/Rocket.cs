@@ -49,21 +49,20 @@ public class Rocket : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 
 
-		Instantiate(explosionRocket,this.transform.position, this.transform.rotation);
+
 		if(other.tag != "detectionCollision")
 		{
 
 			if((other.tag == "botA") || (other.name == "botB"))
 			{
-				//Debug.Log(other.name);
-				//other.GetComponent< Ia_bot>( ).vie=other.GetComponent< Ia_bot>( ).vie-2f;
+				Instantiate(explosionRocket,this.transform.position, this.transform.rotation);
 			}
 			Destroy(gameObject);
 		}
 
 		if((other.tag == "baseA") ||(other.tag == "baseB"))
 		{
-			Debug.Log(other.tag);
+			Instantiate(explosionRocket,this.transform.position, this.transform.rotation);
 			Destroy(gameObject);
 		}
 	}

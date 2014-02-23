@@ -10,6 +10,7 @@ public class RocketJoueur : MonoBehaviour {
 	//private Transform transform;
 	private float duree_de_vie = 4.0f;
 	private float start_time;
+	public Transform explosionRocket;
 	float t =0.0f;
 	
 	void Start () {
@@ -47,10 +48,9 @@ public class RocketJoueur : MonoBehaviour {
 		if(other.tag != "detectionCollision")
 		{
 			
-			if((other.tag == "botA") || (other.name == "botB"))
+			if((other.tag == "botA") || (other.name == "botB")|| (other.tag == "baseA") ||(other.tag == "baseB"))
 			{
-				//Debug.Log(other.name);
-				//other.GetComponent< Ia_bot>( ).vie=other.GetComponent< Ia_bot>( ).vie-2f;
+				Instantiate(explosionRocket,this.transform.position, this.transform.rotation);
 			}
 			Destroy(gameObject);
 		}

@@ -1,8 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Ia_bot.cs">
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Degat.cs">
     <Files>
       <File FileName="Assets\Scripts\Ia_bot.cs" Line="220" Column="1" />
+      <File FileName="Assets\Script\Degat.cs" Line="69" Column="23" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Base.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Ia_bot.cs" Line="370" Column="27" />
+      <File FileName="Assets\Scripts\Collisions.cs" Line="32" Column="17" />
+      <File FileName="Assets\Scripts\Base.cs" Line="58" Column="52" />
+      <File FileName="Assets\Scripts\RocketJoueur.cs" Line="51" Column="104" />
+      <File FileName="Assets\Scripts\Rocket.cs" Line="63" Column="53" />
+>>>>>>> bc0587e089226beb98d08c313a289e8fc3c41791
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

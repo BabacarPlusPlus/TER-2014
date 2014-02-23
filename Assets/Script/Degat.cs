@@ -66,7 +66,7 @@ public class Degat : MonoBehaviour {
 
 	void OnGUI()
 	{
-		affichageVie.text = "Vie : " + vie.ToString();
+		affichageVie.text = vie.ToString();
 	}
 
 	IEnumerator wait(){
