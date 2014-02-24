@@ -11,7 +11,20 @@ public class ClavierControle : MonoBehaviour {
 	public Transform canonDroite; //l'endroit d'ou le missile droite part
 	public Transform canonGauche; //l'endroit d'ou le missile gauche part
 	private int j;
-	
+
+	//public AudioClip Accélération;
+	//public AudioClip Ralentissement;
+	AudioSource Accélération;
+	AudioSource Ralentissement;
+
+
+
+	void Start() {
+		AudioSource[] audios = GetComponents<AudioSource>();
+		Accélération = audios[0];
+		Ralentissement = audios[1];
+	}
+
 	void Awake() 
 	{
 		j = 0;
@@ -42,7 +55,8 @@ public class ClavierControle : MonoBehaviour {
 			if( !fast ){
 				Debug.Log("accélération");
 				fast = true;
-				speed *= 3;
+				speed *= 5;
+				Accélération.Play();
 			}
 		}
 		
@@ -52,6 +66,7 @@ public class ClavierControle : MonoBehaviour {
 				Debug.Log("ralentissement");
 				fast = false;
 				speed /= 3;
+				Ralentissement.Play();
 			}
 		}
 
