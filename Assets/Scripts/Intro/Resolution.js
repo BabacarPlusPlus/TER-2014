@@ -4,7 +4,7 @@ var GuiTexture : Texture2D;
  
 function OnGUI()
 {
-    GUI.DrawTexture(ResizeGUI(Rect(Screen.width/4, Screen.height/2.5, 300, 200)), GuiTexture);
+    GUI.DrawTexture(ResizeGUI(Rect(Screen.width/4.5, Screen.height/2.5, 300, 200)), GuiTexture);
 }    
  
 function ResizeGUI(_rect : Rect) : Rect
