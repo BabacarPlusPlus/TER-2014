@@ -276,8 +276,14 @@ public class Ia_bot : MonoBehaviour {
 	float DistanceVaisseau()
 	{
 		GameObject ennemi=GameObject.Find("Vaisseau");
+<<<<<<< HEAD
 		return Vector3.Distance(this.transform.position, ennemi.transform.position);
 
+=======
+		if(ennemi)
+			return Vector3.Distance(this.transform.position, ennemi.transform.position);
+		else return 0f;
+>>>>>>> a77671146537cc15006afeaf5e9937c4d3471cb3
 	}
 
 	void attaqueBase()
