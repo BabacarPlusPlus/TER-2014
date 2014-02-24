@@ -35,52 +35,65 @@ public class Pause : MonoBehaviour {
 
 			if(pause)
 			{
-				obj.GetComponent<ClavierControle>().enabled = false;
+
 				Time.timeScale = 0.0f;
+				pauseBots() ;
 				image.enabled = true;
 				Logo.enabled = true;
 				reprendre.enabled = true; 
 				quitter.enabled = true;
 
 			}else{
+				enDpauseBots() ;
 				Time.timeScale = 1.0f;
 				image.enabled = false;
 				Logo.enabled = false;
 				reprendre.enabled = false; 
 				quitter.enabled = false;
-				obj.GetComponent<ClavierControle>().enabled = true;
+
 
 			}
 		}
 	}
 
-	void OnMouseDown() 
+	void pauseBots() 
 	{
-		if(pause)
-		{
-		Debug.Log("ok");
-		if( this.name == "quitter") 
-		{
-			Debug.Log(this.name);
-			Application.LoadLevel("Menu");
+		GameObject baseA = GameObject.FindWithTag("baseA");
+		GameObject baseB = GameObject.FindWithTag("baseB");
+		GameObject[] ennemi1 = GameObject.FindGameObjectsWithTag("botB");
+		GameObject[] ennemi2 = GameObject.FindGameObjectsWithTag("botA");
+
+		baseA.GetComponent<Base>().enabled = false;
+		baseB.GetComponent<Base>().enabled = false;
+
+		foreach (GameObject go in ennemi1) {
+			go.GetComponent<Ia_bot>().enabled = false;
 		}
 
-		if( this.name == "reprendre") 
-		{
-			Debug.Log("merde");
-			pause = false;
-			Time.timeScale = 1.0f;
-			image.enabled = false;
-			Logo.enabled = false;
-			reprendre.enabled = false; 
-			quitter.enabled = false;
-			obj.GetComponent<ClavierControle>().enabled = true;
-		}
+		foreach (GameObject go in ennemi2) {
+			go.GetComponent<Ia_bot>().enabled = false;
 		}
 	}
 
-	void onMouseDown() {        
-		Debug.Log ("On Mouse Down Event!!!!!!!!!");
+	void enDpauseBots() 
+	{
+		GameObject baseA = GameObject.FindWithTag("baseA");
+		GameObject baseB = GameObject.FindWithTag("baseB");
+		GameObject[] ennemi1 = GameObject.FindGameObjectsWithTag("botB");
+		GameObject[] ennemi2 = GameObject.FindGameObjectsWithTag("botA");
+		
+		baseA.GetComponent<Base>().enabled = true;
+		baseB.GetComponent<Base>().enabled = true;
+		
+		foreach (GameObject go in ennemi1) {
+			go.GetComponent<Ia_bot>().enabled = true;
+		}
+		
+		foreach (GameObject go in ennemi2) {
+			go.GetComponent<Ia_bot>().enabled = true;
+		}
 	}
+
+	
 
 }
