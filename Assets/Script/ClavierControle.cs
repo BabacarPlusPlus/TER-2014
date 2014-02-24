@@ -22,7 +22,7 @@ public class ClavierControle : MonoBehaviour {
 	void Start() {
 		AudioSource[] audios = GetComponents<AudioSource>();
 		Accélération = audios[0];
-		Ralentissement = audios[1];
+		//Ralentissement = audios[1];
 	}
 
 	void Awake() 
@@ -66,7 +66,7 @@ public class ClavierControle : MonoBehaviour {
 				Debug.Log("ralentissement");
 				fast = false;
 				speed /= 3;
-				Ralentissement.Play();
+				//Ralentissement.Play();
 			}
 		}
 
