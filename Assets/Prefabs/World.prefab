@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400008}
   - 132: {fileID: 13200006}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: recommencer
   m_TagString: Untagged
@@ -105,6 +106,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400012}
   - 132: {fileID: 13200008}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: quitter
   m_TagString: Untagged
@@ -241,6 +243,44 @@ MonoBehaviour:
   quitter: {fileID: 13200008}
   win: {fileID: 13200002}
   limites: {fileID: 13200000}
+  recommencer: {fileID: 13200006}
+  pause: 0
+  baseAvie: {fileID: 0}
+  baseBvie: {fileID: 0}
+  botAnb: {fileID: 0}
+  botBnb: {fileID: 0}
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5ee73498abff645be6dfe7b3e19ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 13100002}
+  Logo: {fileID: 13100000}
+  reprendre: {fileID: 0}
+  quitter: {fileID: 13200008}
+  recommencer: {fileID: 13200006}
+  pause: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5ee73498abff645be6dfe7b3e19ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 13100002}
+  Logo: {fileID: 13100000}
+  reprendre: {fileID: 0}
+  quitter: {fileID: 13200008}
   recommencer: {fileID: 13200006}
   pause: 0
 --- !u!131 &13100000

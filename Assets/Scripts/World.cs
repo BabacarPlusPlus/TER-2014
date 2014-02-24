@@ -17,24 +17,37 @@ public class World : MonoBehaviour {
 	public GUIText recommencer;
 	public bool pause=false;
 
+
+	public GUIText baseAvie;
+	public GUIText baseBvie;
+	public GUIText botAnb;
+	public GUIText botBnb;
+
 	void Start () {
 		gameover.enabled = false;
 		quitter.enabled = false;
 		win.enabled = false;
 		limites.enabled = false;
 		recommencer.enabled = false;
+
+		baseAvie.text = "100 %";
+		baseBvie.text = "100 %";
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+		setBaseAvie();
+		setBaseBvie();
+		setBotAandBnb();
+
 		if(enDOfbaseAllie())
 			printGameOver();
 		
 		if(enDOfbaseEnnemie())
 			printVictory();
 
-		if(getVieVaisseau() <=0 )
+		if(!getVaisseau())
 			printGameOver();
 
 		if((Distance () > 1000 ) && (Distance () < 1300) )
@@ -71,7 +84,7 @@ public class World : MonoBehaviour {
 	bool enDOfbaseAllie()
 	{
 		GameObject baseB = GameObject.FindWithTag("baseB");
-		if(baseB.GetComponent< Base >( ).vie <= 0)
+		if((baseB)&&(baseB.GetComponent< Base >( ).vie <= 0))
 			return true;
 		else return false;
 	}
@@ -79,13 +92,15 @@ public class World : MonoBehaviour {
 	bool enDOfbaseEnnemie()
 	{
 		GameObject baseA = GameObject.FindWithTag("baseA");
-		if(baseA.GetComponent< Base >( ).vie <= 0)
+		if((baseA)&&(baseA.GetComponent< Base >( ).vie <= 0))
 			return true;
 		else return false;
 	}
 
 	void printGameOver(){
-		Time.timeScale = 0.0f;
+
+		//yield return new WaitForSeconds(2.0f);
+		//Time.timeScale = 0.0f;
 		gameover.enabled = true;
 		quitter.enabled = true;
 		image.enabled = true;
@@ -94,7 +109,9 @@ public class World : MonoBehaviour {
 	}
 
 	void printVictory(){
+		//yield return new WaitForSeconds(2.0f);
 		Time.timeScale = 0.0f;
+		pauseBots() ;
 		win.enabled = true;
 		quitter.enabled = true;
 		image.enabled = true;
@@ -102,7 +119,70 @@ public class World : MonoBehaviour {
 		recommencer.enabled = true;
 	}
 
-	int getVieVaisseau(){
-		return Vaisseau.vie;
+	bool getVaisseau(){
+		GameObject vaisseau = GameObject.Find("Vaisseau");
+		if(vaisseau)return true;
+		else return false;
+	}
+
+	void setBaseAvie()
+	{
+		GameObject baseA = GameObject.FindWithTag("baseA");
+		int vie = (int)(baseA.GetComponent< Base >( ).vie/5);
+		baseAvie.text = vie+" %";
+	}
+
+	void setBaseBvie()
+	{
+		GameObject baseB = GameObject.FindWithTag("baseA");
+		int vie = (int)(baseB.GetComponent< Base >( ).vie/5);
+		baseAvie.text = vie+" %";
+	}
+
+	void setBotAandBnb()
+	{
+		GameObject[] botA,botB;
+		botA = GameObject.FindGameObjectsWithTag("botA");
+		botB = GameObject.FindGameObjectsWithTag("botB");
+		botAnb.text="x "+botA.Length;
+		botBnb.text="x "+botB.Length;	
+	}
+
+	void pauseBots() 
+	{
+		GameObject baseA = GameObject.FindWithTag("baseA");
+		GameObject baseB = GameObject.FindWithTag("baseB");
+		GameObject[] ennemi1 = GameObject.FindGameObjectsWithTag("botB");
+		GameObject[] ennemi2 = GameObject.FindGameObjectsWithTag("botA");
+		
+		baseA.GetComponent<Base>().enabled = false;
+		baseB.GetComponent<Base>().enabled = false;
+		
+		foreach (GameObject go in ennemi1) {
+			go.GetComponent<Ia_bot>().enabled = false;
+		}
+		
+		foreach (GameObject go in ennemi2) {
+			go.GetComponent<Ia_bot>().enabled = false;
+		}
+	}
+	
+	void enDpauseBots() 
+	{
+		GameObject baseA = GameObject.FindWithTag("baseA");
+		GameObject baseB = GameObject.FindWithTag("baseB");
+		GameObject[] ennemi1 = GameObject.FindGameObjectsWithTag("botB");
+		GameObject[] ennemi2 = GameObject.FindGameObjectsWithTag("botA");
+		
+		baseA.GetComponent<Base>().enabled = true;
+		baseB.GetComponent<Base>().enabled = true;
+		
+		foreach (GameObject go in ennemi1) {
+			go.GetComponent<Ia_bot>().enabled = true;
+		}
+		
+		foreach (GameObject go in ennemi2) {
+			go.GetComponent<Ia_bot>().enabled = true;
+		}
 	}
 }

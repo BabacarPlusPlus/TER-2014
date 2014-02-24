@@ -42,8 +42,24 @@ public class Ia_bot : MonoBehaviour {
 	void Update () {
 	
 	if(this.tag == "botA")
-			if(detectionJoueur())
-				attaqueEnnemis();;
+	{
+			if(detectionJoueur()){
+
+				attaqueEnnemis();
+				//si la distance < x
+				if( DistanceVaisseau() > 70f)
+				{
+					cible = null;
+					deplacement_alea();
+				}
+
+			}
+			else{
+
+			}
+	}
+	
+
 		
 	if(!detectionEnnemie() && !detectionBase())
 	{
@@ -144,7 +160,7 @@ public class Ia_bot : MonoBehaviour {
 
 	GameObject detectionEnnemie()// objet doit elre player
 	{
-		float distance = 30.0f;
+		float distance = 70.0f;
 		float min = 500f ;
 		GameObject[] ennemies;
 
@@ -203,7 +219,7 @@ public class Ia_bot : MonoBehaviour {
 
 	GameObject detectionJoueur()// objet doit elre player
 	{
-		float distance = 30.0f;
+		float distance = 70.0f;
 		float min = 500f ;
 		GameObject ennemies=null;
 		
@@ -255,6 +271,12 @@ public class Ia_bot : MonoBehaviour {
 			}
 		}
 
+	}
+
+	float DistanceVaisseau()
+	{
+		GameObject ennemi=GameObject.Find("Vaisseau");
+		return Vector3.Distance(this.transform.position, ennemi.transform.position);
 	}
 
 	void attaqueBase()
