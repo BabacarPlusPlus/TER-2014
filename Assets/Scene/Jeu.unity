@@ -414,6 +414,7 @@ GameObject:
   - 54: {fileID: 43551459}
   - 65: {fileID: 43551460}
   - 114: {fileID: 43551461}
+  - 114: {fileID: 43551462}
   m_Layer: 0
   m_Name: Vaisseau
   m_TagString: Untagged
@@ -621,7 +622,23 @@ MonoBehaviour:
   - {fileID: 242822536}
   - {fileID: 1094535083}
   vie0: {fileID: 717561712}
+<<<<<<< HEAD
   affichageVie: {fileID: 114232594}
+=======
+  affichageVie: {fileID: 1674532587}
+--- !u!114 &43551462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43551451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1a4ffa8139e0d4dacc81af24067546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorizonLock: 0
+>>>>>>> 4a195e29a161a42e15ab367b0327d55cbf0abc0c
 --- !u!1 &51279229
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,7 +6536,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993414585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00db858c1f8ff90478dad0aa1bac9a2c, type: 3}
   m_Name: 
