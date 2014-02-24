@@ -74,7 +74,7 @@ public class Base : MonoBehaviour {
 		{
 			//Debug.Log(other.name);
 			//
-			this.vie=this.vie - 1f;
+			this.vie=this.vie - 0.2f;
 		}
 	}
 
