@@ -48,7 +48,6 @@ public class ManetteXbox360 : MonoBehaviour {
 			this.gameObject.transform.Rotate(Vector3.down * 1.5f, Space.World);
 		}
 
-		Debug.Log(Input.GetAxis("R_YAxis_1"));
 
 		if(Input.GetAxis("R_YAxis_1") < 0){
 			if( !fast ){
@@ -68,28 +67,20 @@ public class ManetteXbox360 : MonoBehaviour {
 			}
 		}
 
-		Debug.Log(Input.GetAxis("Triggers_1"));
 
-		if( (previousTtigger = Input.GetAxis("Triggers_1")) < 0){
+		if(Input.GetAxis("RTriggers_1") > 0){
 			if((j % 10) == 0){
 				//Debug.Log("tir droite");
 				canonDroite.GetComponent<CanonJoueur>().shoot=true;
 			}
 		}
 
-		if((previousTtigger = Input.GetAxis("Triggers_1")) > 0){
+		if(Input.GetAxis("LTriggers_1") > 0){
 			if((j % 10) == 0){
 				//Debug.Log("tir gauche");
 				canonGauche.GetComponent<CanonJoueur>().shoot=true;
 			}
 		}
-
-		/*if(previousTtigger == Input.GetAxis("Triggers_1")){
-		 	if((j % 10) == 0){
-				canonDroite.GetComponent<CanonJoueur>().shoot=true;
-				canonGauche.GetComponent<CanonJoueur>().shoot=true;
-			}
-		}//*/
 	}
 }
 
