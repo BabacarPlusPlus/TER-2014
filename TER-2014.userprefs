@@ -1,9 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ClavierControle.cs">
     <Files>
       <File FileName="Assets\Script\ClavierControle.cs" Line="86" Column="45" />
       <File FileName="Assets\Script\Resize_SS.cs" Line="13" Column="36" />
+=======
+<<<<<<< HEAD
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ManetteXbox360.cs">
+    <Files>
+      <File FileName="Assets\Script\ManetteXbox360.cs" Line="87" Column="5" />
+      <File FileName="Assets\Script\ClavierControle.cs" Line="100" Column="56" />
+      <File FileName="Assets\Script\Degat.cs" Line="62" Column="6" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ActionMenu1.cs">
+    <Files>
+      <File FileName="Assets\Scripts\ActionMenu1.cs" Line="96" Column="1" />
+      <File FileName="Assets\Scripts\World.cs" Line="1" Column="1" />
+>>>>>>> 6cc6518f7d48744de97ab6e34ac72f6ed19271fa
+>>>>>>> 093a18b9865b04d6d356efa668f66939c0384ee0
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

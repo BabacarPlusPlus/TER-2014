@@ -59,7 +59,7 @@ public class Degat : MonoBehaviour {
 			if( (i % 7) == 0){
 				vie--;
 			}
-			Debug.Log("*****************  i : " + i +"  *****************");
+			//Debug.Log("*****************  i : " + i +"  *****************");
 
 		}
 	}

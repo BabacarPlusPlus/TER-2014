@@ -59,20 +59,20 @@ public class ClavierControle : MonoBehaviour {
 
 		//rotation droite
 		if( Input.GetAxis("Horizontal") > 0.1){
-			Debug.Log("rotation droite");
+			//Debug.Log("rotation droite");
 			this.gameObject.transform.Rotate(Vector3.up * 1.5f, Space.World);
 		}//*/
 
 		//rotation gauche
 		if(Input.GetAxis("Horizontal") < -0.1){
-			Debug.Log("rotation gauche");
+			//Debug.Log("rotation gauche");
 			this.gameObject.transform.Rotate(Vector3.down * 1.5f, Space.World);
 		}
 	
 		//accélération
 		if( Input.GetAxis("Vertical") > 0.1){
 			if( !fast ){
-				Debug.Log("accélération");
+				//Debug.Log("accélération");
 				fast = true;
 				speed *= 5;
 				Accélération.Play();
@@ -90,7 +90,7 @@ public class ClavierControle : MonoBehaviour {
 		//ralentissement
 		if( Input.GetAxis("Vertical") < -0.1){	
 			if( fast ){
-				Debug.Log("ralentissement");
+				//Debug.Log("ralentissement");
 				fast = false;
 				speed /= 5;
 				Ralentissement.Play();
@@ -101,8 +101,16 @@ public class ClavierControle : MonoBehaviour {
 				part_jet_core_2.renderer.enabled = false ;
 				part_jet_flare_2.renderer.enabled = false ;
 
+<<<<<<< HEAD
 				part_jet_core_3.renderer.enabled = false ;
 				part_jet_flare_3.renderer.enabled = false ;
+=======
+		//Avec le clique
+		if(Input.GetButton("Fire2")){
+			if((j % 10) == 0){
+				//Debug.Log("tir droite");
+				canonDroite.GetComponent<CanonJoueur>().shoot=true;
+>>>>>>> 093a18b9865b04d6d356efa668f66939c0384ee0
 			}
 		}
 
@@ -112,7 +120,7 @@ public class ClavierControle : MonoBehaviour {
 		//Avec le clique ou le clavier
 		if((Input.GetButton("Fire2")) || (Input.GetKey("d"))){
 			if((j % 10) == 0){
-				Debug.Log("tir droite");
+				//Debug.Log("tir droite");
 				canonDroite.GetComponent<CanonJoueur>().shoot=true;
 			}
 		}
@@ -121,10 +129,23 @@ public class ClavierControle : MonoBehaviour {
 
 		//tir gauche
 
+<<<<<<< HEAD
 		//Avec le clique ou le clavier
 		if((Input.GetButton("Fire1")) || (Input.GetKey("g"))){
+=======
+		//Avec le clique
+		if(Input.GetButton("Fire1")){
 			if((j % 10) == 0){
-				Debug.Log("tir gauche");
+				//Debug.Log("tir gauche");
+				canonGauche.GetComponent<CanonJoueur>().shoot=true;
+			}
+		}
+
+		//Avec le clavier
+		if(Input.GetKey("g")){
+>>>>>>> 093a18b9865b04d6d356efa668f66939c0384ee0
+			if((j % 10) == 0){
+				//Debug.Log("tir gauche");
 				canonGauche.GetComponent<CanonJoueur>().shoot=true;
 			}
 		}
