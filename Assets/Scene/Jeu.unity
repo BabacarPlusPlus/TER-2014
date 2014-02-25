@@ -258,8 +258,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 20890076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1541.35864, y: 2229.51929, z: 4847.46387}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 154135.859, y: 222951.922, z: 485746.375}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 805195845}
   - {fileID: 233462456}
@@ -280,7 +280,7 @@ Transform:
   - {fileID: 1094535084}
   - {fileID: 717561713}
   - {fileID: 1494236724}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 43551453}
 --- !u!1 &30566880
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +414,7 @@ GameObject:
   - 54: {fileID: 43551459}
   - 65: {fileID: 43551460}
   - 114: {fileID: 43551461}
+  - 114: {fileID: 43551462}
   m_Layer: 0
   m_Name: Vaisseau
   m_TagString: Untagged
@@ -454,6 +455,7 @@ Transform:
   - {fileID: 1503465778}
   - {fileID: 1310369497}
   - {fileID: 124761151}
+  - {fileID: 20890077}
   m_Father: {fileID: 0}
 --- !u!114 &43551454
 MonoBehaviour:
@@ -622,6 +624,17 @@ MonoBehaviour:
   - {fileID: 1094535083}
   vie0: {fileID: 717561712}
   affichageVie: {fileID: 114232594}
+--- !u!114 &43551462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43551451}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bb6d7f702b144408661eb792cb2e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &51279229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4581,6 +4594,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: fc63c78e45d575a4c89d7d17102a2d91, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc63c78e45d575a4c89d7d17102a2d91, type: 2}
   m_RootGameObject: {fileID: 1294663038}
@@ -4878,6 +4895,10 @@ Prefab:
     - target: {fileID: 5400000, guid: b1b5425f3a3b11e4bb2028a8cfbc96ef, type: 2}
       propertyPath: m_Mass
       value: .00999999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b1b5425f3a3b11e4bb2028a8cfbc96ef, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1b5425f3a3b11e4bb2028a8cfbc96ef, type: 2}
@@ -9316,6 +9337,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1411911658}
   - 114: {fileID: 1411911659}
+  - 114: {fileID: 1411911660}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -9366,6 +9388,17 @@ MonoBehaviour:
   baseBvie: {fileID: 1674532587}
   botAnb: {fileID: 421184952}
   botBnb: {fileID: 904608665}
+--- !u!114 &1411911660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1411911657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5bb6d7f702b144408661eb792cb2e36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1412670206
 GameObject:
   m_ObjectHideFlags: 0
