@@ -1,7 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ClavierControle.cs">
     <Files>
+      <File FileName="TER-2014.sln" Line="1" Column="1" />
+      <File FileName="Assets\Script\ClavierControle.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\ClavierControle.cs" Line="32" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
