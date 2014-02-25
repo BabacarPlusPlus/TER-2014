@@ -23,6 +23,14 @@ public class World : MonoBehaviour {
 	public GUIText botAnb;
 	public GUIText botBnb;
 
+	//menu instruction
+	public GUITexture imageInstruction;
+	public GUITexture InstructionLogo;
+	public GUIText instruction;
+	public GUIText commencer; 
+	public bool begin;
+	public bool choixDispositif;
+
 	void Start () {
 		gameover.enabled = false;
 		quitter.enabled = false;
@@ -32,11 +40,30 @@ public class World : MonoBehaviour {
 
 		baseAvie.text = "100 %";
 		baseBvie.text = "100 %";
+
+		//le menu instruction
+		begin=true;
+		choixDispositif=false;
+		pauseBots();
+
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+		if(begin)
+			printInstruction();
+		if(!begin)
+			endInstruction();
+
+		/*if( choixDispositif )
+			funcchoixDispositif();
+
+		if( !choixDispositif && !begin )
+			funcenDchoixDispositif();*/
+
 		setBaseAvie();
 		setBaseBvie();
 		setBotAandBnb();
@@ -184,5 +211,41 @@ public class World : MonoBehaviour {
 		foreach (GameObject go in ennemi2) {
 			go.GetComponent<Ia_bot>().enabled = true;
 		}
+	}
+
+	void printInstruction()
+	{
+		Time.timeScale = 0.0f;
+		pauseBots() ;
+		imageInstruction.enabled=true; 
+		InstructionLogo.enabled=true; 
+		commencer.enabled=true; 
+		instruction.enabled = true;
+	}
+
+	void endInstruction()
+	{
+
+		imageInstruction.enabled=false; 
+		InstructionLogo.enabled=false; 
+		commencer.enabled=false;
+		instruction.enabled = false;
+		enDpauseBots();
+		Time.timeScale = 1.0f;
+		choixDispositif=true;
+
+	}
+
+	void funcchoixDispositif()
+	{
+		commencer.text="Choisissez un dispositif:";
+		instruction.text="";
+	}
+
+	void funcenDchoixDispositif()
+	{
+		commencer.text="Commencer";
+		instruction.text="";
+		choixDispositif=true;
 	}
 }

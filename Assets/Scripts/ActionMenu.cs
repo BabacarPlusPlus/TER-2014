@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class ActionMenu : MonoBehaviour {
-
+	
 	public GUITexture image;
 	public GUITexture Logo;
 	public GUIText reprendre; 
@@ -10,7 +10,7 @@ public class ActionMenu : MonoBehaviour {
 	public GUIText recommencer;
 	public bool pause=false;
 	//public GameObject obj; 
-
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -19,42 +19,50 @@ public class ActionMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
-
+	
 	void OnMouseDown() 
 	{
-
-			
-			if( this.name == "quitter") 
-			{
-				enDpauseBots();
-				Time.timeScale = 1.0f;
-				Application.LoadLevel("Menu");
-			}
-			
-			if( this.name == "reprendre") 
-			{
-				pause = false;
-				enDpauseBots() ;
-				Time.timeScale = 1.0f;
-				image.enabled = false;
-				Logo.enabled = false;
-				reprendre.enabled = false; 
-				quitter.enabled = false;
-				//obj.GetComponent<ClavierControle>().enabled = true;
-			}
-
+		
+		
+		if( this.name == "quitter") 
+		{
+			enDpauseBots();
+			Time.timeScale = 1.0f;
+			Application.LoadLevel("Menu");
+		}
+		
+		if( this.name == "reprendre") 
+		{
+			pause = false;
+			enDpauseBots() ;
+			Time.timeScale = 1.0f;
+			image.enabled = false;
+			Logo.enabled = false;
+			reprendre.enabled = false; 
+			quitter.enabled = false;
+			//obj.GetComponent<ClavierControle>().enabled = true;
+		}
+		
 		if( this.name == "recommencer") 
 		{
-
-			Time.timeScale = 1.0f;
+			pause = false;
 			enDpauseBots();
+			Time.timeScale = 1.0f;
 			Application.LoadLevel("Jeu");
+		}
+
+
+		if( this.name == "commencer") 
+		{
+			GameObject theworld = GameObject.Find("World");
+			if(theworld) 
+				theworld.GetComponent< World >().begin = false;
 		}
 		//recommencer / dans world
 	}
-
+	
 	void pauseBots() 
 	{
 		GameObject baseA = GameObject.FindWithTag("baseA");
