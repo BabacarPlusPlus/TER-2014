@@ -1,30 +1,6 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ManetteXbox360.cs">
-    <Files>
-      <File FileName="Assets\Script\ManetteXbox360.cs" Line="1" Column="1" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\ClavierControle.cs">
-    <Files>
-      <File FileName="Assets\Script\ClavierControle.cs" Line="69" Column="19" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ActionMenu.cs">
-    <Files>
-      <File FileName="Assets\Scripts\World.cs" Line="187" Column="3" />
-      <File FileName="Assets\Scripts\Ia_bot.cs" Line="172" Column="40" />
-      <File FileName="Assets\Scripts\Pause.cs" Line="64" Column="68" />
-      <File FileName="Assets\Script\Vaisseau.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Degat.cs" Line="26" Column="3" />
-      <File FileName="Assets\Scripts\Base.cs" Line="69" Column="6" />
-      <File FileName="Assets\Scripts\ActionMenu.cs" Line="13" Column="2" />
->>>>>>> fca2c2dd92fafd2bb5faef330aa1ff1daf1b2949
->>>>>>> 8f65f4b19e207de0180525a19158422274755a0d
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
