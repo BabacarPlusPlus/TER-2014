@@ -26,7 +26,8 @@ public class Pause : MonoBehaviour {
 
 		if(Input.GetKeyUp(KeyCode.Escape)) 
 		{
-			if(pause==true){
+			Application.LoadLevel("Menu");
+			/*if(pause==true){
 				pause = false;
 			}
 			else {
@@ -36,23 +37,31 @@ public class Pause : MonoBehaviour {
 			if(pause)
 			{
 
+
 				Time.timeScale = 0.0f;
 				pauseBots() ;
+				Debug.Log("time:"+Time.timeScale);
 				image.enabled = true;
 				Logo.enabled = true;
 				reprendre.enabled = true; 
 				quitter.enabled = true;
 
+
 			}else{
-				enDpauseBots() ;
+
+				Debug.Log("time:"+Time.timeScale);
 				Time.timeScale = 1.0f;
+				enDpauseBots() ;
 				image.enabled = false;
 				Logo.enabled = false;
 				reprendre.enabled = false; 
 				quitter.enabled = false;
 
 
-			}
+
+			}*/
+
+
 		}
 	}
 
@@ -66,13 +75,16 @@ public class Pause : MonoBehaviour {
 		baseA.GetComponent<Base>().enabled = false;
 		baseB.GetComponent<Base>().enabled = false;
 
+
 		foreach (GameObject go in ennemi1) {
 			go.GetComponent<Ia_bot>().enabled = false;
+
 		}
 
 		foreach (GameObject go in ennemi2) {
 			go.GetComponent<Ia_bot>().enabled = false;
 		}
+
 	}
 
 	void enDpauseBots() 
