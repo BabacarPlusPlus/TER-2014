@@ -20584,6 +20584,33 @@ Animator:
   m_PrefabInternal: {fileID: 1564860725}
   m_GameObject: {fileID: 953836047}
   m_Enabled: 1
+<<<<<<< HEAD
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: efa7e9f239ddde4458e5aa92a7d71089, type: 2}
+  - {fileID: 2100000, guid: 9b72aaacfa51191438e905bf17527430, type: 2}
+  - {fileID: 2100000, guid: 797220875df9bd54cb098b39c14d70e5, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &459596353
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 51f413747029ad3489e986b5163670de,
+    type: 3}
+  m_PrefabInternal: {fileID: 574150647}
+  m_GameObject: {fileID: 459596350}
+  m_Mesh: {fileID: 4300000, guid: 51f413747029ad3489e986b5163670de, type: 3}
+--- !u!1 &459733522
+=======
   m_Avatar: {fileID: 9000000, guid: 13a62624eecaa404584a3950b2aeab99, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -20591,6 +20618,7 @@ Animator:
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
 --- !u!1 &958263003
+>>>>>>> 53d783d4d9fef1d00270bba28f667fade84147ae
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100034, guid: b1b5425f3a3b11e4bb2028a8cfbc96ef, type: 2}
@@ -21252,7 +21280,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 356525a8d2f273e4b9a88847a5ca99e1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .194000006
+  m_Volume: .209999993
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -23449,10 +23477,16 @@ Rigidbody:
 --- !u!114 &1123115658
 MonoBehaviour:
   m_ObjectHideFlags: 0
+<<<<<<< HEAD
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993414585}
+=======
   m_PrefabParentObject: {fileID: 11400004, guid: fc63c78e45d575a4c89d7d17102a2d91,
     type: 2}
   m_PrefabInternal: {fileID: 1708873921}
   m_GameObject: {fileID: 1123115655}
+>>>>>>> 53d783d4d9fef1d00270bba28f667fade84147ae
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9fe64c8b29fca534ca655480e8101792, type: 3}
