@@ -37,12 +37,6 @@ public class Degat : MonoBehaviour {
 			Debug.Log("Perdu");
 			Destroy(this.gameObject);
 			Instantiate(explosion,this.transform.position, this.transform.rotation);
-			WAIT = true;
-			if(WAIT){
-				k = j;
-				WAIT = false;//*/
-			}
-
 			//Application.LoadLevel("Jeu");
 		
 		}
@@ -66,14 +60,7 @@ public class Degat : MonoBehaviour {
 
 	void OnGUI()
 	{
-		affichageVie.text = vie.ToString();
-	}
-
-	IEnumerator wait(){
-		Debug.Log("attend");
-		yield return new WaitForSeconds(1f);
-		Debug.Log("fin");
-		fin = true;
+		affichageVie.text = "X"+vie.ToString();
 	}
 
 }
