@@ -67,7 +67,7 @@ public class MouvementKinect : MonoBehaviour {
 
 				if( !fast ){
 					fast = true;
-					speed *= 3;
+					speed *= 5;
 
 				}
 			
@@ -79,7 +79,7 @@ public class MouvementKinect : MonoBehaviour {
 
 				if( fast ){
 					fast = false;
-					speed /= 3;
+					speed /= 5;
 				}
 
 			}//*/
@@ -87,7 +87,7 @@ public class MouvementKinect : MonoBehaviour {
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TirDroite) >= 0.1f)
 			{
 
-				if((j % 20) == 0){
+				if((j % 10) == 0){
 					canonDroite.GetComponent<CanonJoueur>().shoot=true;
 				}
 
@@ -97,7 +97,7 @@ public class MouvementKinect : MonoBehaviour {
 			if(manager.GetGestureProgress(userId, KinectWrapper.Gestures.TirGauche) >= 0.1f)
 			{
 
-				if((j % 20) == 0){
+				if((j % 10) == 0){
 					canonGauche.GetComponent<CanonJoueur>().shoot=true;
 				}					
 
