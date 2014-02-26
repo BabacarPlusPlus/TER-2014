@@ -62,7 +62,10 @@ public class World : MonoBehaviour {
 			funcchoixDispositif();
 
 		if( !choixDispositif && !begin )
-			funcenDchoixDispositif();*/
+			funcenDchoixDispositif();
+
+
+		 */
 
 		setBaseAvie();
 		setBaseBvie();
@@ -240,12 +243,16 @@ public class World : MonoBehaviour {
 	{
 		commencer.text="Choisissez un dispositif:";
 		instruction.text="";
+		//afficher les 3 images
+
 	}
 
 	void funcenDchoixDispositif()
 	{
 		commencer.text="Commencer";
 		instruction.text="";
-		choixDispositif=true;
+		choixDispositif=false;
+		//enlever les 3 images
+		//afficher texte tuto
 	}
 }

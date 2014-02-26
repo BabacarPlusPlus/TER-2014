@@ -18,7 +18,7 @@ public class Base : MonoBehaviour {
 	void Update () {
 		i++;
 
-		if((i % 250== 0) &&(numberBot() < 30))
+		if((i % 125 == 0) &&(numberBot() < 25))
 		{
 			createBot();
 			//Debug.Log (this.name+" : "+numberBot());
