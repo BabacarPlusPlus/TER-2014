@@ -53,9 +53,10 @@ public class World : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
-		if(begin)
+
+		if(begin && !ActiveDispositif.occulus)
 			printInstruction();
-		if(!begin)
+		else 
 			endInstruction();
 
 		/*if( choixDispositif )

@@ -36,6 +36,7 @@ public class OVRLensCorrection : OVRImageEffectBase
 	[HideInInspector]
 	public Vector4 _HmdWarpParam 		= new Vector4(1.0f, 0.0f, 0.0f, 0.0f);
 
+
 	// Called by camera to get lens correction values
 	public Material GetMaterial(bool portrait)
 	{
