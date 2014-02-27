@@ -40,7 +40,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 351949d43fa8603408c5e34d150d29e9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .730000019
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -72,7 +72,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
