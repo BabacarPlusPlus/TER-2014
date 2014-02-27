@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scene/KinectSample.unity
   - enabled: 1
     path: Assets/Scene/Menu.unity
+  - enabled: 1
+    path: Assets/Scene/ChoixDispositif.unity
