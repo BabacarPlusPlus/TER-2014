@@ -33,6 +33,7 @@ public class World : MonoBehaviour {
 
 	public GameObject camera;
 	public GameObject vaisseau;
+	public GameObject ovr;
 
 	void Awake(){
 
@@ -51,7 +52,8 @@ public class World : MonoBehaviour {
 		}
 
 		if(ActiveDispositif.occulus){
-			Debug.Log("Occulus");
+			ovr.SetActive(true);
+			camera.GetComponent<Camera>().enabled = false;
 		}
 		else{
 			Debug.Log("Pas Occulus");

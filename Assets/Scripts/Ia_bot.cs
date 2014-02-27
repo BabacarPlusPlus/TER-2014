@@ -253,7 +253,7 @@ public class Ia_bot : MonoBehaviour {
 		float distance = 70.0f;
 		if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position)< distance))
 		{
-			if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position) > 25f))
+			if((cible != null)&&(Vector3.Distance(cible.transform.position, this.transform.position) > 40f))
 			{
 				this.transform.LookAt(cible.transform.position);
 				

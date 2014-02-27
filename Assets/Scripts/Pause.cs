@@ -26,7 +26,14 @@ public class Pause : MonoBehaviour {
 
 		if(Input.GetKeyUp(KeyCode.Escape)) 
 		{
+
+			ActiveDispositif.kinect = false;
+			ActiveDispositif.manette = false;
+			ActiveDispositif.occulus = false;
+			ActiveDispositif.navigator = false;
+			ActiveDispositif.clavier = false;
 			Application.LoadLevel("Menu");
+
 			/*if(pause==true){
 				pause = false;
 			}
