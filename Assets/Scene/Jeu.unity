@@ -589,6 +589,7 @@ GameObject:
   - 114: {fileID: 43551462}
   - 82: {fileID: 43551463}
   - 114: {fileID: 43551464}
+  - 114: {fileID: 43551465}
   m_Layer: 0
   m_Name: Vaisseau
   m_TagString: Player
@@ -898,6 +899,18 @@ MonoBehaviour:
   radarLocation: 6
   mapCenterCustom: {x: 0, y: 0}
   seuil: 199
+--- !u!114 &43551465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43551451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1a4ffa8139e0d4dacc81af24067546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HorizonLock: 0
 --- !u!1 &45536947
 GameObject:
   m_ObjectHideFlags: 0
