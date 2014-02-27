@@ -31,6 +31,33 @@ public class World : MonoBehaviour {
 	public bool begin;
 	public bool choixDispositif;
 
+	public GameObject camera;
+	public GameObject vaisseau;
+
+	void Awake(){
+
+
+		if(ActiveDispositif.kinect){
+			camera.GetComponent<KinectManager>().enabled = true;
+			vaisseau.GetComponent<MouvementKinect>().enabled = true;
+		}
+
+		if(ActiveDispositif.manette){
+			vaisseau.GetComponent<ManetteXbox360>().enabled = true;
+		}
+
+		if(ActiveDispositif.navigator || ActiveDispositif.clavier){
+			vaisseau.GetComponent<ClavierControle>().enabled = true;
+		}
+
+		if(ActiveDispositif.occulus){
+			Debug.Log("Occulus");
+		}
+		else{
+			Debug.Log("Pas Occulus");
+		}
+	}
+
 	void Start () {
 		gameover.enabled = false;
 		quitter.enabled = false;
@@ -52,6 +79,9 @@ public class World : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//activation script et gameObject dispositif
+
 	
 		if(begin)
 			printInstruction();

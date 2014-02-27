@@ -20,7 +20,7 @@ public class MenuEffect : MonoBehaviour {
 	void OnMouseDown(){
 		
 		//audio.Play();
-		Application.LoadLevel("Jeu");
+		Application.LoadLevel("ChoixDispositif");
 		
 	}
 }
