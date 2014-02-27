@@ -732,7 +732,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43551451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7e5e6944974d5d429bbe879e6da2089, type: 3}
   m_Name: 
@@ -746,7 +746,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43551451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9a4fe53cb38bb2419c155072f86ce3d, type: 3}
   m_Name: 
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 43551451}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5bb6d7f702b144408661eb792cb2e36, type: 3}
   m_Name: 
@@ -12595,16 +12595,6 @@ Prefab:
       propertyPath: DistanceText
       value: 
       objectReference: {fileID: 1037305392}
-<<<<<<< HEAD
-    - target: {fileID: 11400000, guid: d54f5bbe9ea26804aad3f4adcf4302ee, type: 2}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 993414585}
-    - target: {fileID: 11400000, guid: d54f5bbe9ea26804aad3f4adcf4302ee, type: 2}
-      propertyPath: vaisseau
-      value: 
-      objectReference: {fileID: 43551451}
-=======
     - target: {fileID: 100020, guid: d54f5bbe9ea26804aad3f4adcf4302ee, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -12621,7 +12611,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
->>>>>>> f1c2098be25b6daf715550f461c02cbf556d0112
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d54f5bbe9ea26804aad3f4adcf4302ee, type: 2}
   m_RootGameObject: {fileID: 2125512041}
@@ -21395,7 +21384,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993414585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00db858c1f8ff90478dad0aa1bac9a2c, type: 3}
   m_Name: 
@@ -47488,8 +47477,6 @@ MonoBehaviour:
   commencer: {fileID: 1796389776}
   begin: 0
   choixDispositif: 0
-  camera: {fileID: 993414585}
-  vaisseau: {fileID: 43551451}
 --- !u!1 &2126603809
 GameObject:
   m_ObjectHideFlags: 0
